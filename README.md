@@ -1,9 +1,8 @@
-# 👋 Hi There!
-I'm Ming, a Data Scientist with a background in Data Science and Computer Science. With a strong passion for machine learning, web development, and technology, I thrive on leveraging data to drive innovation and make informed decisions.
-
-
 ![](https://github-readme-stats.vercel.app/api?username=SuperGokou&show_icons=true)
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=SuperGokou&layout=compact)
+
+# 👋 Hi There!
+I'm Ming, a Data Scientist with a background in Data Science and Computer Science. With a strong passion for machine learning, web development, and technology, I thrive on leveraging data to drive innovation and make informed decisions.
 
 ## 🚀 Here's What I'm About:
 

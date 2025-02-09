@@ -24,6 +24,6 @@ I'm always open to discussions, collaborations, and networking. Feel free to rea
 
 💼 LinkedIn: [linkedin.com/in/ming-xia-3b5965119](https://www.linkedin.com/in/ming-xia-3b5965119/)  
 
-🌐 Portfolio:  
+🌐 Portfolio:  https://supergokou.github.io/my-portfolio/
 
 Thanks for stopping by! 🚀

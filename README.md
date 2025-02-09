@@ -13,7 +13,7 @@ I'm Ming, a Data Scientist with a background in Data Science and Computer Scienc
 - **Machine Learning for Mortgage Risk Assessment**: Designed predictive models integrating economic and climate data to enhance risk assessment.
 
 ## 🔧 Skills:
-- **Programming**: Python (Pandas, Scikit-Learn, PyTorch), SQL, R, Java, C++
+- **Programming**: Python (Pandas, Scikit-Learn, PyTorch), SQL, R, Java, JavaScript, Html, C, C++
 - **Analytics Techniques**: Machine Learning, NLP, A/B Testing, Time Series Analysis, Data Visualization (Tableau)
 
 ## 💬 Let's Connect:

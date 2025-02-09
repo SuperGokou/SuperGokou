@@ -21,7 +21,9 @@ I'm Ming, a Data Scientist with a background in Data Science and Computer Scienc
 I'm always open to discussions, collaborations, and networking. Feel free to reach out:
 
 📧 Email: xiaming0707@gmail.com 
+
 💼 LinkedIn: [linkedin.com/in/ming-xia-3b5965119](https://www.linkedin.com/in/ming-xia-3b5965119/)  
-🌐 portfolio:  
+
+🌐 Portfolio:  
 
 Thanks for stopping by! 🚀

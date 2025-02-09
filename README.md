@@ -1,7 +1,7 @@
 <table>
   <tr>
-    <td><img src="https://github-readme-stats.vercel.app/api?username=SuperGokou&show_icons=true&card_width=500" width="100%"></td>
-    <td><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SuperGokou&layout=compact&card_width=500" width="120%"></td>
+    <td><img src="https://github-readme-stats.vercel.app/api?username=SuperGokou&show_icons=true&card_width=500&card_height=300" width="100%"></td>
+    <td><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SuperGokou&layout=compact&card_width=500&card_height=300" width="100%"></td>
   </tr>
 </table>
 

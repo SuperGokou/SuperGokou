@@ -1,5 +1,9 @@
-![](https://github-readme-stats.vercel.app/api?username=SuperGokou&show_icons=true)
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=SuperGokou&layout=compact)
+<table>
+  <tr>
+    <td><img src="https://github-readme-stats.vercel.app/api?username=SuperGokou&show_icons=true&card_width=500" width="100%"></td>
+    <td><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SuperGokou&layout=compact&card_width=500" width="100%"></td>
+  </tr>
+</table>
 
 # 👋 Hi There!
 I'm Ming, a Data Scientist with a background in Data Science and Computer Science. With a strong passion for machine learning, web development, and technology, I thrive on leveraging data to drive innovation and make informed decisions.

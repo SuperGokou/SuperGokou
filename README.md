@@ -29,7 +29,7 @@ I'm always open to discussions, collaborations, and networking. Feel free to rea
 
 📧 Email: xiaming0707@gmail.com 
 
-💼 LinkedIn: [linkedin.com/in/gokouming/)](https://www.linkedin.com/in/gokouming/))  
+💼 LinkedIn: [linkedin.com/in/gokouming](https://www.linkedin.com/in/gokouming)  
 
 🌐 Portfolio:  https://supergokou.github.io/my-portfolio/
 

@@ -31,6 +31,6 @@ I'm always open to discussions, collaborations, and networking. Feel free to rea
 
 💼 LinkedIn: [linkedin.com/in/gokouming](https://www.linkedin.com/in/gokouming)  
 
-🌐 Portfolio:  https://supergokou.github.io/my-portfolio/
+🌐 Portfolio:  https://supergokou.github.io/my-portfolio
 
 Thanks for stopping by! 🚀

@@ -31,6 +31,6 @@ I'm always open to discussions, collaborations, and networking. Feel free to rea
 
 💼 LinkedIn: https://www.linkedin.com/in/gokouming
 
-🌐 Portfolio: https://xiaming0707.wixsite.com/gokousportfolio
+🌐 Portfolio: https://www.seas.upenn.edu/~xiaming/
 
 Thanks for stopping by! 🚀

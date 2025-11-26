@@ -1,0 +1,45 @@
+<svg width="400" height="120" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background frame -->
+  <rect x="5" y="5" width="390" height="110" rx="12" ry="12"
+        fill="#050816" stroke="#1E90FF" stroke-width="2" />
+
+  <!-- Title text -->
+  <text x="200" y="35" text-anchor="middle" font-size="18" fill="#1E90FF" font-family="monospace">
+    🐍 Greedy Snake
+  </text>
+
+  <!-- Bottom text -->
+  <text x="200" y="100" text-anchor="middle" font-size="14" fill="#00FFA3" font-family="monospace">
+    Data · ML · Quant
+  </text>
+
+  <!-- Path the snake will move along -->
+  <rect x="30" y="55" width="340" height="10" rx="5" ry="5" fill="#111827" stroke="#4B5563" />
+
+  <!-- Snake body group -->
+  <g id="snake">
+    <!-- Body segments -->
+    <circle cx="0" cy="60" r="6" fill="#22C55E" />
+    <circle cx="-14" cy="60" r="6" fill="#16A34A" />
+    <circle cx="-28" cy="60" r="6" fill="#15803D" />
+    <circle cx="-42" cy="60" r="6" fill="#166534" />
+
+    <!-- Head -->
+    <circle cx="8" cy="60" r="8" fill="#4ADE80" />
+    <!-- Eyes -->
+    <circle cx="5" cy="57" r="1.5" fill="#000000" />
+    <circle cx="11" cy="57" r="1.5" fill="#000000" />
+    <!-- Tongue -->
+    <polygon points="14,62 20,60 14,58" fill="#F97316" />
+
+    <!-- Movement animation -->
+    <animateTransform
+      attributeName="transform"
+      type="translate"
+      from="20 0"
+      to="320 0"
+      dur="4s"
+      repeatCount="indefinite"
+      calcMode="linear" />
+  </g>
+</svg>

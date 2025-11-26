@@ -25,4 +25,47 @@
     <!-- Body segments (UPenn blue tones) -->
     <circle cx="-40" cy="125" r="7" fill="#011F5B" />
     <circle cx="-55" cy="125" r="7" fill="#1e3a8a" />
-    <circle cx
+    <circle cx="-70" cy="125" r="7" fill="#1d4ed8" />
+    <circle cx="-85" cy="125" r="7" fill="#1e40af" />
+    <circle cx="-100" cy="125" r="7" fill="#1d3557" />
+
+    <!-- Spine spikes -->
+    <polygon points="-40,115 -45,125 -35,125" fill="#A51C30" />
+    <polygon points="-55,115 -60,125 -50,125" fill="#990000" />
+    <polygon points="-70,115 -75,125 -65,125" fill="#A51C30" />
+    <polygon points="-85,115 -90,125 -80,125" fill="#990000" />
+
+    <!-- Head -->
+    <circle cx="0" cy="125" r="11" fill="#A51C30" />
+    <ellipse cx="5" cy="128" rx="7" ry="5" fill="#dc2626" />
+
+    <!-- Eyes -->
+    <circle cx="-2" cy="120" r="2" fill="#000" />
+    <circle cx="4" cy="120" r="2" fill="#000" />
+    <circle cx="-2" cy="119" r="0.9" fill="#facc15" />
+    <circle cx="4" cy="119" r="0.9" fill="#facc15" />
+
+    <!-- Horns -->
+    <polygon points="-3,114 -8,100 -3,100" fill="#e5e7eb" />
+    <polygon points="5,114 10,100 6,100" fill="#e5e7eb" />
+
+    <!-- Whiskers -->
+    <path d="M 5 128 C 12 130, 18 130, 26 128"
+          stroke="#f97316" stroke-width="1" fill="none" />
+    <path d="M 5 126 C 12 124, 18 124, 26 123"
+          stroke="#f97316" stroke-width="1" fill="none" />
+
+    <!-- Tail -->
+    <polygon points="-110,125 -125,118 -125,132" fill="#ef4444" />
+
+    <!-- Movement animation -->
+    <animateTransform
+      attributeName="transform"
+      type="translate"
+      from="40 0"
+      to="330 0"
+      dur="4s"
+      repeatCount="indefinite"
+      calcMode="linear" />
+  </g>
+</svg>

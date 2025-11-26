@@ -112,8 +112,3 @@
     />
   </span>
 </p>
-
-<p align="left">
-  <em>Always open to DS · CS · AI · ML · Quant · Trading collaborations.</em> 🚀
-</p>
-

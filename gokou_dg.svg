@@ -14,15 +14,19 @@
       <stop offset="100%" stop-color="#FFD166" stop-opacity="0" />
     </radialGradient>
 
-    <!-- Perfect 5-point star, smaller size -->
+    <!-- Perfect 5-point star -->
     <symbol id="dbStar" viewBox="0 0 100 100">
       <path d="M50 10 L61 38 L90 40 L66 58 L74 88 L50 70 L26 88 L34 58 L10 40 L39 38 Z"
             fill="#B91C1C"/>
     </symbol>
   </defs>
 
-  <!-- Background card -->
-  <rect x="0" y="0" width="800" height="180" rx="24" fill="url(#bgGrad)" />
+  <!-- Background (square, no radius) -->
+  <rect x="0" y="0" width="800" height="180" fill="url(#bgGrad)" />
+
+  <!-- Outer border line -->
+  <rect x="1" y="1" width="798" height="178"
+        fill="none" stroke="#1F2933" stroke-width="2" />
 
   <!-- Aura -->
   <circle cx="400" cy="90" r="180" fill="url(#auraGrad)" opacity="0.8" />
@@ -31,34 +35,31 @@
   <g transform="translate(70,55)">
     <!-- 1-star ball -->
     <circle cx="0" cy="0" r="22" fill="#FFA62B" stroke="#F97316" stroke-width="3"/>
-    <!-- star scaled down: 14x14 -->
-    <use href="#dbStar" x="-7" y="-7" width="14" height="14" />
+    <use href="#dbStar" x="-7" y="-7" width="14" height="14"/>
 
     <!-- 3-star ball -->
     <g transform="translate(-15,60)">
       <circle cx="0" cy="0" r="20" fill="#FFB347" stroke="#F97316" stroke-width="3"/>
-      <use href="#dbStar" x="-20" y="-7" width="14" height="14" />
-      <use href="#dbStar" x="-7" y="-7" width="14" height="14" />
-      <use href="#dbStar" x="6" y="-7" width="14" height="14" />
+      <use href="#dbStar" x="-20" y="-7" width="14" height="14"/>
+      <use href="#dbStar" x="-7" y="-7" width="14" height="14"/>
+      <use href="#dbStar" x="6" y="-7" width="14" height="14"/>
     </g>
   </g>
 
   <!-- RIGHT Dragon Balls -->
   <g transform="translate(720,55)">
-    <!-- 4-star ball -->
     <circle cx="0" cy="0" r="22" fill="#FFA62B" stroke="#F97316" stroke-width="3"/>
-    <!-- scaled + perfect placement -->
-    <use href="#dbStar" x="-16" y="-16" width="14" height="14" />
-    <use href="#dbStar" x="2" y="-16" width="14" height="14" />
-    <use href="#dbStar" x="-16" y="2" width="14" height="14" />
-    <use href="#dbStar" x="2" y="2" width="14" height="14" />
+    <use href="#dbStar" x="-16" y="-16" width="14" height="14"/>
+    <use href="#dbStar" x="2" y="-16" width="14" height="14"/>
+    <use href="#dbStar" x="-16" y="2" width="14" height="14"/>
+    <use href="#dbStar" x="2" y="2" width="14" height="14"/>
   </g>
 
-  <!-- Lightning / energy -->
-  <path d="M 150 40 L 165 30 L 180 42 L 195 32" stroke="#F97316" stroke-width="2" fill="none" />
-  <path d="M 610 35 L 625 25 L 640 38 L 655 28" stroke="#F97316" stroke-width="2" fill="none" />
-  <path d="M 180 135 L 195 125 L 210 138 L 225 128" stroke="#F59E0B" stroke-width="2" fill="none" />
-  <path d="M 575 135 L 590 125 L 605 138 L 620 128" stroke="#F59E0B" stroke-width="2" fill="none" />
+  <!-- Lightning -->
+  <path d="M150 40 L165 30 L180 42 L195 32" stroke="#F97316" stroke-width="2" fill="none"/>
+  <path d="M610 35 L625 25 L640 38 L655 28" stroke="#F97316" stroke-width="2" fill="none"/>
+  <path d="M180 135 L195 125 L210 138 L225 128" stroke="#F59E0B" stroke-width="2" fill="none"/>
+  <path d="M575 135 L590 125 L605 138 L620 128" stroke="#F59E0B" stroke-width="2" fill="none"/>
 
   <!-- Main Title -->
   <text x="400" y="82" text-anchor="middle"
@@ -73,4 +74,5 @@
         font-family="system-ui, sans-serif">
     UPenn AI · Harvard DS · WSU CS · Machine Learning · Quant Trading · Research
   </text>
+
 </svg>

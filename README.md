@@ -3,13 +3,13 @@
     <td width="50%" style="padding: 0;">
       <img 
         src="https://awesome-github-stats.azurewebsites.net/user-stats/SuperGokou?cardType=level&theme=default"
-        style="width: 100%; height: 250px; object-fit: contain; border: 1px solid #e0e0e0; border-radius: 8px;"
+        style="width: 100%; height: 220px; object-fit: contain; border: 1px solid #e0e0e0; border-radius: 8px;"
       >
     </td>
     <td width="50%" style="padding: 0;">
       <img 
         src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=SuperGokou&theme=default"
-        style="width: 100%; height: 250px; object-fit: contain; border: 1px solid #e0e0e0; border-radius: 8px;"
+        style="width: 100%; height: 220px; object-fit: contain; border: 1px solid #e0e0e0; border-radius: 8px;"
       >
     </td>
   </tr>

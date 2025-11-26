@@ -7,78 +7,70 @@
       <stop offset="100%" stop-color="#FFD9A0" />
     </linearGradient>
 
-    <!-- Aura glow behind title -->
+    <!-- Aura glow -->
     <radialGradient id="auraGrad" cx="50%" cy="50%" r="50%">
       <stop offset="0%" stop-color="#FFEAA7" stop-opacity="1" />
       <stop offset="40%" stop-color="#FFD166" stop-opacity="0.7" />
       <stop offset="100%" stop-color="#FFD166" stop-opacity="0" />
     </radialGradient>
+
+    <!-- Perfect 5-point star, smaller size -->
+    <symbol id="dbStar" viewBox="0 0 100 100">
+      <path d="M50 10 L61 38 L90 40 L66 58 L74 88 L50 70 L26 88 L34 58 L10 40 L39 38 Z"
+            fill="#B91C1C"/>
+    </symbol>
   </defs>
 
   <!-- Background card -->
-  <rect x="0" y="0" width="800" height="180" rx="24" ry="24" fill="url(#bgGrad)" />
+  <rect x="0" y="0" width="800" height="180" rx="24" fill="url(#bgGrad)" />
 
-  <!-- Aura circle behind text -->
+  <!-- Aura -->
   <circle cx="400" cy="90" r="180" fill="url(#auraGrad)" opacity="0.8" />
 
-  <!-- Left Dragon Balls -->
-  <g transform="translate(80,50)">
+  <!-- LEFT Dragon Balls -->
+  <g transform="translate(70,55)">
     <!-- 1-star ball -->
-    <circle cx="0" cy="0" r="18" fill="#FFA62B" stroke="#F97316" stroke-width="2" />
-    <polygon points="-2,-4 0,-8 2,-4 6,-4 2,-1 4,3 0,1 -4,3 -2,-1 -6,-4"
-             fill="#DC2626" />
+    <circle cx="0" cy="0" r="22" fill="#FFA62B" stroke="#F97316" stroke-width="3"/>
+    <!-- star scaled down: 14x14 -->
+    <use href="#dbStar" x="-7" y="-7" width="14" height="14" />
 
     <!-- 3-star ball -->
-    <g transform="translate(-20,48)">
-      <circle cx="0" cy="0" r="16" fill="#FFB347" stroke="#F97316" stroke-width="2" />
-      <polygon points="-4,-3 -2,-7 0,-3 4,-3 1,0 3,4 0,2 -3,4 -1,0 -4,-3"
-               fill="#B91C1C" />
-      <polygon points="-8,3 -6,-1 -4,3 -0,3 -3,6 -1,10 -4,7 -7,10 -5,6 -8,3"
-               fill="#B91C1C" />
-      <polygon points="4,3 6,-1 8,3 12,3 9,6 11,10 8,7 5,10 7,6 4,3"
-               fill="#B91C1C" />
+    <g transform="translate(-15,60)">
+      <circle cx="0" cy="0" r="20" fill="#FFB347" stroke="#F97316" stroke-width="3"/>
+      <use href="#dbStar" x="-20" y="-7" width="14" height="14" />
+      <use href="#dbStar" x="-7" y="-7" width="14" height="14" />
+      <use href="#dbStar" x="6" y="-7" width="14" height="14" />
     </g>
   </g>
 
-  <!-- Right Dragon Balls -->
-  <g transform="translate(720,52)">
+  <!-- RIGHT Dragon Balls -->
+  <g transform="translate(720,55)">
     <!-- 4-star ball -->
-    <circle cx="0" cy="0" r="18" fill="#FFA62B" stroke="#F97316" stroke-width="2" />
-    <polygon points="-6,-4 -4,-8 -2,-4 2,-4 0,-1 2,3 -2,1 -6,3 -4,-1 -6,-4"
-             fill="#B91C1C" />
-    <polygon points="4,-4 6,-8 8,-4 12,-4 10,-1 12,3 8,1 4,3 6,-1 4,-4"
-             fill="#B91C1C" />
-    <polygon points="-6,4 -4,0 -2,4 2,4 0,7 2,11 -2,9 -6,11 -4,7 -6,4"
-             fill="#B91C1C" />
-    <polygon points="4,4 6,0 8,4 12,4 10,7 12,11 8,9 4,11 6,7 4,4"
-             fill="#B91C1C" />
+    <circle cx="0" cy="0" r="22" fill="#FFA62B" stroke="#F97316" stroke-width="3"/>
+    <!-- scaled + perfect placement -->
+    <use href="#dbStar" x="-16" y="-16" width="14" height="14" />
+    <use href="#dbStar" x="2" y="-16" width="14" height="14" />
+    <use href="#dbStar" x="-16" y="2" width="14" height="14" />
+    <use href="#dbStar" x="2" y="2" width="14" height="14" />
   </g>
 
-  <!-- Lightning / energy strokes -->
+  <!-- Lightning / energy -->
   <path d="M 150 40 L 165 30 L 180 42 L 195 32" stroke="#F97316" stroke-width="2" fill="none" />
   <path d="M 610 35 L 625 25 L 640 38 L 655 28" stroke="#F97316" stroke-width="2" fill="none" />
   <path d="M 180 135 L 195 125 L 210 138 L 225 128" stroke="#F59E0B" stroke-width="2" fill="none" />
   <path d="M 575 135 L 590 125 L 605 138 L 620 128" stroke="#F59E0B" stroke-width="2" fill="none" />
 
-  <!-- Main Title (Dragon Ball style: orange fill + dark stroke) -->
-  <text x="400" y="82"
-        text-anchor="middle"
-        font-size="34"
-        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-        fill="#F97316"
-        stroke="#1F2933"
-        stroke-width="2.5"
-        font-weight="900">
+  <!-- Main Title -->
+  <text x="400" y="82" text-anchor="middle"
+        font-size="38" fill="#F97316" stroke="#1F2933" stroke-width="1"
+        font-family="Impact, system-ui" font-weight="900">
     Gokou · Data Science · AI · Quant
   </text>
 
   <!-- Subtitle -->
-  <text x="400" y="118"
-        text-anchor="middle"
-        font-size="16"
-        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-        fill="#111827">
+  <text x="400" y="118" text-anchor="middle"
+        font-size="17" fill="#111827"
+        font-family="system-ui, sans-serif">
     Harvard DS · UPenn AI · WSU CS · Machine Learning · Quant Trading · Research
   </text>
-
 </svg>

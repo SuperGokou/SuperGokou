@@ -1,9 +1,23 @@
 <table>
   <tr>
-    <td><img src="https://github-readme-stats.vercel.app/api?username=SuperGokou&show_icons=true&card_width=500" width="100%"></td>
-    <td><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SuperGokou&layout=compact&card_width=500" width="100%", height="200%"></td>
+    <td width="50%" style="padding: 0;">
+      <img 
+        src="https://awesome-github-stats.azurewebsites.net/user-stats/SuperGokou?cardType=level&theme=default"
+        style="width: 100%; height: 250px; object-fit: contain; border: 1px solid #e0e0e0; border-radius: 8px;"
+      >
+    </td>
+    <td width="50%" style="padding: 0;">
+      <img 
+        src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=SuperGokou&theme=default"
+        style="width: 100%; height: 250px; object-fit: contain; border: 1px solid #e0e0e0; border-radius: 8px;"
+      >
+    </td>
   </tr>
 </table>
+
+
+
+
 
 # 👋 Hi There!
 I'm Ming, a Data Scientist with a background in Data Science and Computer Science. With a strong passion for machine learning, web development, and technology, I thrive on leveraging data to drive innovation and make informed decisions.

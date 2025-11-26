@@ -6,7 +6,7 @@
 
 ## 👋 Hi, I'm <span style="color:#1E90FF;">Ming</span>!
 **Harvard DS | UPenn AI | WSU CS**  
-**Machine Learning · Quant Trading · Finance · AI Engineering**
+**CS · DS · ML · AI · Quant Trading · Finance**
 <img src="gokou_pnl.svg" alt="Gokou PnL Dragon" width="380" align="right" />
 
 - 🌍 **Location:** China · USA · UK · Singapore  

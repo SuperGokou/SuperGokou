@@ -1,4 +1,4 @@
-r<p align="center">
+<p align="center">
   <img src="shenron.svg" alt="cnn_dragon" width="900"/>
 </p>
 

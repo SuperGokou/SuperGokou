@@ -144,7 +144,7 @@
 
 <text x="600" y="72" class="sub" text-anchor="middle"
 
-        font-size="17" fill="#111827"
+        font-size="20" fill="#111827"
         font-family="system-ui, sans-serif">
     UPenn AI · Harvard DS · WSU CS · Machine Learning · Quant Trading · Research
 </text>

@@ -133,15 +133,31 @@
   <!-- NEW LIGHT YELLOW BACKGROUND -->
   <rect x="0" y="0" width="1200" height="440" rx="22" fill="url(#bg)"/>
 
-<!-- Centered Header -->
+<!-- <!-- Centered Header -->
 <text x="600" y="44" class="title" text-anchor="middle">
   Gokou • Data Science • AI • Machine Learning • Quant Trading Research
 </text>
 
 <text x="600" y="72" class="sub" text-anchor="middle">
   Upenn AI • Harvard DS • WSU CS • Machine Learning • Quant Trading • Research
-</text>>
+</text>> -->
 
+  <!-- Main Title -->
+  <text x="600" y="2" text-anchor="middle"
+        font-size="38" fill="#F97316" stroke="#1F2933" stroke-width="1"
+        font-family="Impact, system-ui" font-weight="900">
+    Gokou · Data Science · AI · Quant
+  </text>
+
+  <!-- Subtitle -->
+  <text x="600" y="118" text-anchor="middle"
+        font-size="17" fill="#111827"
+        font-family="system-ui, sans-serif">
+    UPenn AI · Harvard DS · WSU CS · Machine Learning · Quant Trading · Research
+  </text>
+
+
+     
   <!-- Input -->
   <g transform="translate(40,135)">
     <rect class="card" x="0" y="0" width="170" height="220" rx="16"/>

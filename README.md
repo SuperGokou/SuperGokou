@@ -22,6 +22,13 @@
   </tr>
 </table>
 
+<div align="center" style="display: flex; justify-content: center;">
+
+  <img src="gokou_dg.svg" alt="PnL Dragon Animation" width="100%" />
+
+</div>
+
+
 <table>
 <tr>
   <td valign="top" width="60%">

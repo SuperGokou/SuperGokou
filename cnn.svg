@@ -135,7 +135,7 @@
 
 <!-- Centered Header -->
 <text x="600" y="44" text-anchor="middle"
-      font-size="38" fill="#F97316" stroke="#111827" stroke-width="1.2"
+      font-size="38" fill="#F97316" stroke="#111827" stroke-width="2.2"
       font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif"
       font-weight="900" letter-spacing="0.5">
   Gokou · Data Science · AI · Quant

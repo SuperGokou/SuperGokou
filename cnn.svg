@@ -1,70 +1,76 @@
 <svg viewBox="0 0 1200 440" width="100%" height="440"
      xmlns="http://www.w3.org/2000/svg" role="img"
-     aria-label="Dragon Ball-inspired CNN animation for Data Science, AI, ML, and Quant Research">
+     aria-label="Dragon Ball-inspired CNN animation for Data Science, AI, ML, and Quant Research (light theme)">
   <defs>
-    <!-- Background -->
+    <!-- LIGHT YELLOW BACKGROUND -->
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#07060B"/>
-      <stop offset="100%" stop-color="#120B18"/>
+      <stop offset="0%"  stop-color="#FFF7CC"/>
+      <stop offset="55%" stop-color="#FFEEB0"/>
+      <stop offset="100%" stop-color="#FFE38A"/>
     </linearGradient>
 
-    <!-- Dragon Ball orange wire gradient (replaces blue/green) -->
+    <!-- Dragon Ball orange wire gradient -->
     <linearGradient id="wire" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#FFD29A" stop-opacity="0.18"/>
-      <stop offset="45%" stop-color="#FF9F3D" stop-opacity="0.40"/>
-      <stop offset="100%" stop-color="#D85A00" stop-opacity="0.18"/>
+      <stop offset="0%"   stop-color="#FFB15B" stop-opacity="0.35"/>
+      <stop offset="45%"  stop-color="#FF7A00" stop-opacity="0.70"/>
+      <stop offset="100%" stop-color="#C84B00" stop-opacity="0.35"/>
     </linearGradient>
 
-    <!-- Dragon-ball-inspired orange orb -->
+    <!-- Orb (orange energy sphere) -->
     <radialGradient id="orbFill" cx="35%" cy="30%" r="70%">
-      <stop offset="0%" stop-color="#FFE2B8"/>
-      <stop offset="45%" stop-color="#FFB15B"/>
+      <stop offset="0%" stop-color="#FFE8C7"/>
+      <stop offset="45%" stop-color="#FFB85F"/>
       <stop offset="75%" stop-color="#FF7A00"/>
-      <stop offset="100%" stop-color="#C84B00"/>
+      <stop offset="100%" stop-color="#B94100"/>
     </radialGradient>
 
     <!-- Orb highlight -->
     <radialGradient id="orbShine" cx="30%" cy="25%" r="45%">
-      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.85"/>
-      <stop offset="55%" stop-color="#FFFFFF" stop-opacity="0.15"/>
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9"/>
+      <stop offset="55%" stop-color="#FFFFFF" stop-opacity="0.18"/>
       <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
     </radialGradient>
 
     <!-- Star gradient -->
     <linearGradient id="starG" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#FF2D2D"/>
-      <stop offset="100%" stop-color="#A80000"/>
+      <stop offset="100%" stop-color="#9A0000"/>
     </linearGradient>
 
-    <!-- Cards -->
+    <!-- Cards (soft cream panel) -->
     <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#140E1C"/>
-      <stop offset="100%" stop-color="#0E0A14"/>
+      <stop offset="0%"  stop-color="#FFF2D3" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#FFE7B8" stop-opacity="0.88"/>
     </linearGradient>
 
-    <!-- Feature map tint (orange theme) -->
+    <!-- Feature map tint (warm sand) -->
     <linearGradient id="fm" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#FFD29A" stop-opacity="0.22"/>
-      <stop offset="100%" stop-color="#FF7A00" stop-opacity="0.08"/>
+      <stop offset="0%"   stop-color="#FFD29A" stop-opacity="0.38"/>
+      <stop offset="100%" stop-color="#FF7A00" stop-opacity="0.12"/>
     </linearGradient>
 
-    <!-- Glow -->
-    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
-      <feGaussianBlur stdDeviation="3.8" result="b"/>
+    <!-- Glow: tuned for light background -->
+    <filter id="glow" x="-70%" y="-70%" width="240%" height="240%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feColorMatrix in="b" type="matrix"
+        values="1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 0.55 0" result="bb"/>
       <feMerge>
-        <feMergeNode in="b"/>
+        <feMergeNode in="bb"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
 
     <!-- Pulse glow -->
-    <filter id="pulseGlow" x="-80%" y="-80%" width="260%" height="260%">
-      <feGaussianBlur stdDeviation="7" result="bb"/>
+    <filter id="pulseGlow" x="-90%" y="-90%" width="280%" height="280%">
+      <feGaussianBlur stdDeviation="6" result="bb"/>
       <feColorMatrix in="bb" type="matrix"
         values="1 0 0 0 0
                 0 1 0 0 0
                 0 0 1 0 0
-                0 0 0 0.85 0"/>
+                0 0 0 0.55 0"/>
       <feMerge>
         <feMergeNode/>
         <feMergeNode in="SourceGraphic"/>
@@ -75,7 +81,7 @@
     <radialGradient id="sig" cx="50%" cy="50%" r="60%">
       <stop offset="0%" stop-color="#FFFFFF" stop-opacity="1"/>
       <stop offset="35%" stop-color="#FFD29A" stop-opacity="0.95"/>
-      <stop offset="70%" stop-color="#FF9F3D" stop-opacity="0.55"/>
+      <stop offset="70%" stop-color="#FF9F3D" stop-opacity="0.60"/>
       <stop offset="100%" stop-color="#FF7A00" stop-opacity="0"/>
     </radialGradient>
 
@@ -83,25 +89,32 @@
     <path id="star5" d="M0,-7 L1.9,-2.2 L6.7,-2.2 L2.8,0.8 L4.3,6.2 L0,3.3 L-4.3,6.2 L-2.8,0.8 L-6.7,-2.2 L-1.9,-2.2 Z"/>
 
     <style>
-      .title { font: 800 16px ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial; fill: #F9FAFB; opacity: .95; letter-spacing: .2px; }
-      .sub   { font: 600 12px ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial; fill: #FFD29A; opacity: .72; }
-      .tiny  { font: 700 11px ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial; fill: #F9FAFB; opacity: .78; }
+      /* TEXT: deep warm brown for readability */
+      .title { font: 900 16px ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+               fill: #4A2400; letter-spacing: .2px; }
+      .sub   { font: 700 12px ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+               fill: #7A3C00; opacity: .92; }
+      .tiny  { font: 800 11px ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+               fill: #4A2400; opacity: .95; }
 
       .wire { stroke: url(#wire); stroke-width: 2.4; fill: none; stroke-linecap: round; opacity: .95; }
       .wireDash { stroke-dasharray: 8 12; animation: dash 6s linear infinite; }
       @keyframes dash { to { stroke-dashoffset: -220; } }
 
-      .card { fill: url(#card); stroke: #FFD29A; stroke-opacity: .10; stroke-width: 1.2; }
-      .fm { fill: url(#fm); stroke: #FFD29A; stroke-opacity: .18; stroke-width: 1; }
+      /* Panels + maps */
+      .card { fill: url(#card); stroke: #C84B00; stroke-opacity: .18; stroke-width: 1.2; }
+      .fm { fill: url(#fm); stroke: #C84B00; stroke-opacity: .22; stroke-width: 1; }
 
-      .kernel { fill: none; stroke: #FFD29A; stroke-width: 2; filter: url(#glow); stroke-opacity: .95; }
-      .kernelCell { fill: #FFD29A; opacity: .07; }
-      .kernelHot { fill: #FFD29A; opacity: .26; filter: url(#pulseGlow); }
+      /* Kernel */
+      .kernel { fill: none; stroke: #C84B00; stroke-width: 2; filter: url(#glow); stroke-opacity: .85; }
+      .kernelCell { fill: #C84B00; opacity: .06; }
+      .kernelHot { fill: #FF7A00; opacity: .22; filter: url(#pulseGlow); }
 
+      /* Orbs */
       .orb { filter: url(#glow); }
-      .orbRing { fill: none; stroke: #FFD29A; stroke-opacity: .34; stroke-width: 2; }
+      .orbRing { fill: none; stroke: #C84B00; stroke-opacity: .25; stroke-width: 2; }
       .orbPulse { transform-box: fill-box; transform-origin: center; animation: orbPulse 2.4s ease-in-out infinite; }
-      @keyframes orbPulse { 0%{transform:scale(1);opacity:.9} 50%{transform:scale(1.12);opacity:.35} 100%{transform:scale(1);opacity:.9} }
+      @keyframes orbPulse { 0%{transform:scale(1);opacity:.85} 50%{transform:scale(1.10);opacity:.35} 100%{transform:scale(1);opacity:.85} }
 
       @media (prefers-reduced-motion: reduce) {
         .wireDash { animation: none !important; }
@@ -117,10 +130,10 @@
     <path id="flow5" d="M980 200 C 1040 200, 1080 210, 1120 220"/>
   </defs>
 
-  <!-- Background -->
+  <!-- NEW LIGHT YELLOW BACKGROUND -->
   <rect x="0" y="0" width="1200" height="440" rx="22" fill="url(#bg)"/>
 
-  <!-- Header with your keywords -->
+  <!-- Header -->
   <text x="32" y="44" class="title">Gokou • Data Science • AI • Machine Learning • Quant Trading Research</text>
   <text x="32" y="66" class="sub">Upenn AI • Harvard DS • WSU CS • Machine Learning • Quant Trading • Research</text>
 
@@ -132,18 +145,18 @@
 
     <g transform="translate(18,70)">
       <rect class="fm" x="0" y="0" width="134" height="134" rx="10"/>
-      <g opacity=".22" stroke="#FFD29A" stroke-width="1">
+      <g opacity=".20" stroke="#B94100" stroke-width="1">
         <path d="M0 22 H134 M0 44 H134 M0 66 H134 M0 88 H134 M0 110 H134"/>
         <path d="M22 0 V134 M44 0 V134 M66 0 V134 M88 0 V134 M110 0 V134"/>
       </g>
-      <rect x="66" y="44" width="22" height="22" rx="4" fill="#FFB15B" opacity=".10">
-        <animate attributeName="opacity" values="0.05;0.24;0.05" dur="1.7s" repeatCount="indefinite"/>
+      <rect x="66" y="44" width="22" height="22" rx="4" fill="#FF7A00" opacity=".10">
+        <animate attributeName="opacity" values="0.05;0.22;0.05" dur="1.7s" repeatCount="indefinite"/>
       </rect>
-      <rect x="22" y="88" width="22" height="22" rx="4" fill="#FF7A00" opacity=".08">
-        <animate attributeName="opacity" values="0.04;0.20;0.04" dur="2.1s" repeatCount="indefinite" begin=".2s"/>
+      <rect x="22" y="88" width="22" height="22" rx="4" fill="#C84B00" opacity=".08">
+        <animate attributeName="opacity" values="0.04;0.18;0.04" dur="2.1s" repeatCount="indefinite" begin=".2s"/>
       </rect>
-      <rect x="88" y="22" width="22" height="22" rx="4" fill="#FFD29A" opacity=".08">
-        <animate attributeName="opacity" values="0.04;0.18;0.04" dur="1.9s" repeatCount="indefinite" begin=".4s"/>
+      <rect x="88" y="22" width="22" height="22" rx="4" fill="#FFB15B" opacity=".08">
+        <animate attributeName="opacity" values="0.04;0.16;0.04" dur="1.9s" repeatCount="indefinite" begin=".4s"/>
       </rect>
     </g>
 
@@ -152,9 +165,7 @@
       <circle cx="0" cy="0" r="26" fill="url(#orbFill)"/>
       <circle cx="-7" cy="-9" r="18" fill="url(#orbShine)" opacity=".9"/>
       <circle cx="0" cy="0" r="28" class="orbRing"/>
-      <g class="orbPulse">
-        <circle cx="0" cy="0" r="28" class="orbRing" opacity=".45"/>
-      </g>
+      <g class="orbPulse"><circle cx="0" cy="0" r="28" class="orbRing" opacity=".45"/></g>
       <g transform="translate(0,2) scale(0.9)">
         <use href="#star5" fill="url(#starG)" transform="translate(-10,-2) scale(0.8)"/>
         <use href="#star5" fill="url(#starG)" transform="translate(0,6) scale(0.8)"/>
@@ -182,7 +193,7 @@
           <rect class="kernelCell" x="20" y="0" width="10" height="10" rx="2"/>
           <rect class="kernelCell" x="0" y="10" width="10" height="10" rx="2"/>
           <rect class="kernelHot"  x="10" y="10" width="10" height="10" rx="2">
-            <animate attributeName="opacity" values="0.10;0.42;0.10" dur="0.9s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0.10;0.40;0.10" dur="0.9s" repeatCount="indefinite"/>
           </rect>
           <rect class="kernelCell" x="20" y="10" width="10" height="10" rx="2"/>
           <rect class="kernelCell" x="0" y="20" width="10" height="10" rx="2"/>
@@ -196,9 +207,9 @@
           dur="3.6s" repeatCount="indefinite"/>
       </g>
 
-      <circle cx="90" cy="42" r="10" fill="#FFB15B" opacity=".10" filter="url(#pulseGlow)">
+      <circle cx="90" cy="42" r="10" fill="#FF7A00" opacity=".10" filter="url(#pulseGlow)">
         <animate attributeName="r" values="8;16;8" dur="1.8s" repeatCount="indefinite" begin=".2s"/>
-        <animate attributeName="opacity" values="0.05;0.23;0.05" dur="1.8s" repeatCount="indefinite" begin=".2s"/>
+        <animate attributeName="opacity" values="0.05;0.18;0.05" dur="1.8s" repeatCount="indefinite" begin=".2s"/>
       </circle>
     </g>
 
@@ -207,9 +218,7 @@
       <circle cx="0" cy="0" r="26" fill="url(#orbFill)"/>
       <circle cx="-7" cy="-9" r="18" fill="url(#orbShine)" opacity=".9"/>
       <circle cx="0" cy="0" r="28" class="orbRing"/>
-      <g class="orbPulse" style="animation-delay:.25s">
-        <circle cx="0" cy="0" r="28" class="orbRing" opacity=".45"/>
-      </g>
+      <g class="orbPulse" style="animation-delay:.25s"><circle cx="0" cy="0" r="28" class="orbRing" opacity=".45"/></g>
       <g transform="translate(0,2) scale(0.9)">
         <use href="#star5" fill="url(#starG)" transform="translate(-10,-2) scale(0.75)"/>
         <use href="#star5" fill="url(#starG)" transform="translate(10,-2) scale(0.75)"/>
@@ -227,14 +236,14 @@
 
     <g transform="translate(24,74)">
       <rect class="fm" x="0" y="0" width="92" height="92" rx="10" opacity=".75"/>
-      <g opacity=".18" stroke="#FFD29A" stroke-width="1">
+      <g opacity=".16" stroke="#B94100" stroke-width="1">
         <path d="M0 23 H92 M0 46 H92 M0 69 H92"/>
         <path d="M23 0 V92 M46 0 V92 M69 0 V92"/>
       </g>
 
       <g transform="translate(104,12)">
         <rect class="fm" x="0" y="0" width="64" height="64" rx="10" opacity=".95"/>
-        <g opacity=".18" stroke="#FFD29A" stroke-width="1">
+        <g opacity=".16" stroke="#B94100" stroke-width="1">
           <path d="M0 16 H64 M0 32 H64 M0 48 H64"/>
           <path d="M16 0 V64 M32 0 V64 M48 0 V64"/>
         </g>
@@ -242,11 +251,11 @@
           values="104 12; 104 0; 104 12" dur="2.6s" repeatCount="indefinite"/>
       </g>
 
-      <path d="M96 44 L112 44" stroke="#F9FAFB" stroke-opacity=".55" stroke-width="2" stroke-linecap="round"/>
-      <path d="M112 44 L106 38 M112 44 L106 50" stroke="#F9FAFB" stroke-opacity=".55" stroke-width="2" stroke-linecap="round"/>
-      <circle cx="96" cy="44" r="8" fill="#FFB15B" opacity=".10" filter="url(#pulseGlow)">
+      <path d="M96 44 L112 44" stroke="#7A3C00" stroke-opacity=".55" stroke-width="2" stroke-linecap="round"/>
+      <path d="M112 44 L106 38 M112 44 L106 50" stroke="#7A3C00" stroke-opacity=".55" stroke-width="2" stroke-linecap="round"/>
+      <circle cx="96" cy="44" r="8" fill="#FF7A00" opacity=".10" filter="url(#pulseGlow)">
         <animate attributeName="r" values="6;14;6" dur="1.7s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0.05;0.20;0.05" dur="1.7s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.05;0.18;0.05" dur="1.7s" repeatCount="indefinite"/>
       </circle>
     </g>
   </g>
@@ -271,8 +280,8 @@
       </g>
 
       <path d="M8 110 C 30 85, 55 135, 78 110 S 126 85, 150 110"
-            stroke="#FFB15B" stroke-opacity=".28" stroke-width="2" fill="none">
-        <animate attributeName="stroke-opacity" values="0.12;0.38;0.12" dur="2.2s" repeatCount="indefinite"/>
+            stroke="#FF7A00" stroke-opacity=".22" stroke-width="2" fill="none">
+        <animate attributeName="stroke-opacity" values="0.10;0.30;0.10" dur="2.2s" repeatCount="indefinite"/>
       </path>
     </g>
 
@@ -281,9 +290,7 @@
       <circle cx="0" cy="0" r="26" fill="url(#orbFill)"/>
       <circle cx="-7" cy="-9" r="18" fill="url(#orbShine)" opacity=".9"/>
       <circle cx="0" cy="0" r="28" class="orbRing"/>
-      <g class="orbPulse" style="animation-delay:.5s">
-        <circle cx="0" cy="0" r="28" class="orbRing" opacity=".45"/>
-      </g>
+      <g class="orbPulse" style="animation-delay:.5s"><circle cx="0" cy="0" r="28" class="orbRing" opacity=".45"/></g>
       <g transform="translate(0,2) scale(0.88)">
         <use href="#star5" fill="url(#starG)" transform="translate(-12,-6) scale(0.65)"/>
         <use href="#star5" fill="url(#starG)" transform="translate(0,-8) scale(0.65)"/>
@@ -303,88 +310,7 @@
 
     <g transform="translate(20,76)">
       <g>
-        <circle cx="40" cy="20" r="8" fill="#160F1E" stroke="#FFD29A" stroke-opacity=".28" stroke-width="2"/>
-        <circle cx="40" cy="52" r="8" fill="#160F1E" stroke="#FFD29A" stroke-opacity=".28" stroke-width="2"/>
-        <circle cx="40" cy="84" r="8" fill="#160F1E" stroke="#FFD29A" stroke-opacity=".28" stroke-width="2"/>
-        <circle cx="40" cy="116" r="8" fill="#160F1E" stroke="#FFD29A" stroke-opacity=".28" stroke-width="2"/>
-      </g>
-
-      <g>
-        <circle cx="180" cy="36" r="9" fill="#160F1E" stroke="#FFB15B" stroke-opacity=".35" stroke-width="2"/>
-        <circle cx="180" cy="72" r="9" fill="#160F1E" stroke="#FFB15B" stroke-opacity=".35" stroke-width="2"/>
-        <circle cx="180" cy="108" r="9" fill="#160F1E" stroke="#FFB15B" stroke-opacity=".35" stroke-width="2"/>
-      </g>
-
-      <g class="wire wireDash" opacity=".9">
-        <path d="M48 20 C 90 20, 120 36, 171 36"/>
-        <path d="M48 20 C 90 20, 120 72, 171 72"/>
-        <path d="M48 52 C 90 52, 120 36, 171 36"/>
-        <path d="M48 52 C 90 52, 120 72, 171 72"/>
-        <path d="M48 84 C 90 84, 120 72, 171 72"/>
-        <path d="M48 84 C 90 84, 120 108, 171 108"/>
-        <path d="M48 116 C 90 116, 120 108, 171 108"/>
-      </g>
-
-      <circle cx="180" cy="72" r="14" fill="#FFB15B" opacity=".10" filter="url(#pulseGlow)">
-        <animate attributeName="r" values="12;20;12" dur="1.9s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0.05;0.20;0.05" dur="1.9s" repeatCount="indefinite"/>
-      </circle>
-
-      <text class="sub" x="154" y="152" opacity=".75">softmax</text>
-    </g>
-
-    <!-- Final orb: 7-star (1 center + 6 ring, subtle rotations) -->
-    <g class="orb" transform="translate(200,186)">
-      <circle cx="0" cy="0" r="26" fill="url(#orbFill)"/>
-      <circle cx="-7" cy="-9" r="18" fill="url(#orbShine)" opacity=".9"/>
-      <circle cx="0" cy="0" r="28" class="orbRing"/>
-      <g class="orbPulse" style="animation-delay:.75s">
-        <circle cx="0" cy="0" r="28" class="orbRing" opacity=".45"/>
-      </g>
-
-      <g transform="translate(0,2) scale(0.86)">
-        <use href="#star5" fill="url(#starG)" transform="translate(0,2) scale(0.62)"/>
-        <use href="#star5" fill="url(#starG)" transform="translate(0,-14) rotate(0)  scale(0.52)"/>
-        <use href="#star5" fill="url(#starG)" transform="translate(12,-7) rotate(18) scale(0.52)"/>
-        <use href="#star5" fill="url(#starG)" transform="translate(12,9)  rotate(36) scale(0.52)"/>
-        <use href="#star5" fill="url(#starG)" transform="translate(0,16)  rotate(54) scale(0.52)"/>
-        <use href="#star5" fill="url(#starG)" transform="translate(-12,9) rotate(72) scale(0.52)"/>
-        <use href="#star5" fill="url(#starG)" transform="translate(-12,-7) rotate(90) scale(0.52)"/>
-      </g>
-    </g>
-  </g>
-
-  <!-- Global wires -->
-  <g class="wire wireDash">
-    <path d="M220 245 C 300 245, 330 210, 400 210"/>
-    <path d="M450 225 C 480 225, 500 225, 560 220"/>
-    <path d="M640 225 C 650 225, 690 225, 760 220"/>
-    <path d="M890 225 C 920 225, 940 200, 980 200"/>
-  </g>
-
-  <!-- Flow dots -->
-  <g>
-    <circle r="11" fill="url(#sig)">
-      <animateMotion dur="2.9s" repeatCount="indefinite"><mpath href="#flow1"/></animateMotion>
-      <animate attributeName="opacity" values="0;1;0" dur="2.9s" repeatCount="indefinite"/>
-    </circle>
-    <circle r="10" fill="url(#sig)">
-      <animateMotion dur="3.2s" begin=".25s" repeatCount="indefinite"><mpath href="#flow2"/></animateMotion>
-      <animate attributeName="opacity" values="0;1;0" dur="3.2s" begin=".25s" repeatCount="indefinite"/>
-    </circle>
-    <circle r="10" fill="url(#sig)">
-      <animateMotion dur="3.6s" begin=".5s" repeatCount="indefinite"><mpath href="#flow3"/></animateMotion>
-      <animate attributeName="opacity" values="0;1;0" dur="3.6s" begin=".5s" repeatCount="indefinite"/>
-    </circle>
-    <circle r="11" fill="url(#sig)">
-      <animateMotion dur="3.0s" begin=".35s" repeatCount="indefinite"><mpath href="#flow4"/></animateMotion>
-      <animate attributeName="opacity" values="0;1;0" dur="3.0s" begin=".35s" repeatCount="indefinite"/>
-    </circle>
-    <circle r="10" fill="url(#sig)">
-      <animateMotion dur="3.4s" begin=".65s" repeatCount="indefinite"><mpath href="#flow5"/></animateMotion>
-      <animate attributeName="opacity" values="0;1;0" dur="3.4s" begin=".65s" repeatCount="indefinite"/>
-    </circle>
-  </g>
-
-  <rect x="12" y="12" width="1176" height="416" rx="18" fill="none" stroke="#FFD29A" stroke-opacity="0.08"/>
-</svg>
+        <circle cx="40" cy="20" r="8" fill="#FFF4D9" stroke="#B94100" stroke-opacity=".22" stroke-width="2"/>
+        <circle cx="40" cy="52" r="8" fill="#FFF4D9" stroke="#B94100" stroke-opacity=".22" stroke-width="2"/>
+        <circle cx="40" cy="84" r="8" fill="#FFF4D9" stroke="#B94100" stroke-opacity=".22" stroke-width="2"/>
+        <circle cx="40" cy="116" r="8" fill="#FF

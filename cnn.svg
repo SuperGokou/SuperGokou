@@ -141,12 +141,14 @@
   Gokou · Data Science · AI · Quant
 </text>
 
-
-<text x="600" y="72" class="sub" text-anchor="middle"
-
-        font-size="20" fill="#111827"
-        font-family="system-ui, sans-serif">
-    UPenn AI · Harvard DS · WSU CS · Machine Learning · Quant Trading · Research
+<text x="600" y="78"
+      text-anchor="middle"
+      font-size="16"
+      fill="#4A2400"
+      font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif"
+      font-weight="600"
+      letter-spacing="0.4">
+  UPenn AI · Harvard DS · WSU CS · Machine Learning · Quant Trading · Research
 </text>
 
 

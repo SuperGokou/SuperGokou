@@ -1,6 +1,6 @@
 <div align="center" style="display: flex; justify-content: center;">
 
-  <img src="gokou_dg.svg" alt="PnL Dragon Animation" width="100%" />
+  <img src="cnn.svg" alt="PnL Dragon Animation" width="100%" />
 
 </div>
 

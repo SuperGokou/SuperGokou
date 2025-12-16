@@ -134,11 +134,11 @@
   <rect x="0" y="0" width="1200" height="440" rx="22" fill="url(#bg)"/>
 
   <!-- Header -->
-<text x="32" y="44" class="title" font-size="22">
+<text x="32" y="44" class="title" font-size="22", style="text-anchor: middle">
   Gokou • Data Science • AI • Machine Learning • Quant Trading Research
 </text>
 
-<text x="32" y="66" class="sub" font-size="14">
+<text x="32" y="66" class="sub" font-size="14", style="text-anchor: middle">
   Upenn AI • Harvard DS • WSU CS • Machine Learning • Quant Trading • Research
 </text>
 

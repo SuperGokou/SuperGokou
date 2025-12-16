@@ -386,9 +386,5 @@
     </circle>
   </g>
 
-  <text x="32" y="418" class="sub" opacity=".55">
-    Dragon Ball-inspired CNN animation for Data Science, AI, ML, and Quant Research
-  </text>
-
   <rect x="12" y="12" width="1176" height="416" rx="18" fill="none" stroke="#FFD29A" stroke-opacity="0.08"/>
 </svg>

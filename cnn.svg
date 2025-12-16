@@ -313,4 +313,81 @@
         <circle cx="40" cy="20" r="8" fill="#FFF4D9" stroke="#B94100" stroke-opacity=".22" stroke-width="2"/>
         <circle cx="40" cy="52" r="8" fill="#FFF4D9" stroke="#B94100" stroke-opacity=".22" stroke-width="2"/>
         <circle cx="40" cy="84" r="8" fill="#FFF4D9" stroke="#B94100" stroke-opacity=".22" stroke-width="2"/>
-        <circle cx="40" cy="116" r="8" fill="#FF
+        <circle cx="40" cy="116" r="8" fill="#FFF4D9" stroke="#B94100" stroke-opacity=".22" stroke-width="2"/>
+      </g>
+
+      <g>
+        <circle cx="180" cy="36" r="9" fill="#FFF4D9" stroke="#FF7A00" stroke-opacity=".28" stroke-width="2"/>
+        <circle cx="180" cy="72" r="9" fill="#FFF4D9" stroke="#FF7A00" stroke-opacity=".28" stroke-width="2"/>
+        <circle cx="180" cy="108" r="9" fill="#FFF4D9" stroke="#FF7A00" stroke-opacity=".28" stroke-width="2"/>
+      </g>
+
+      <g class="wire wireDash" opacity=".9">
+        <path d="M48 20 C 90 20, 120 36, 171 36"/>
+        <path d="M48 20 C 90 20, 120 72, 171 72"/>
+        <path d="M48 52 C 90 52, 120 36, 171 36"/>
+        <path d="M48 52 C 90 52, 120 72, 171 72"/>
+        <path d="M48 84 C 90 84, 120 72, 171 72"/>
+        <path d="M48 84 C 90 84, 120 108, 171 108"/>
+        <path d="M48 116 C 90 116, 120 108, 171 108"/>
+      </g>
+
+      <circle cx="180" cy="72" r="14" fill="#FF7A00" opacity=".10" filter="url(#pulseGlow)">
+        <animate attributeName="r" values="12;20;12" dur="1.9s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.05;0.18;0.05" dur="1.9s" repeatCount="indefinite"/>
+      </circle>
+
+      <text class="sub" x="154" y="152" opacity=".88">softmax</text>
+    </g>
+
+    <!-- Final orb: 7-star -->
+    <g class="orb" transform="translate(200,186)">
+      <circle cx="0" cy="0" r="26" fill="url(#orbFill)"/>
+      <circle cx="-7" cy="-9" r="18" fill="url(#orbShine)" opacity=".9"/>
+      <circle cx="0" cy="0" r="28" class="orbRing"/>
+      <g class="orbPulse" style="animation-delay:.75s"><circle cx="0" cy="0" r="28" class="orbRing" opacity=".45"/></g>
+
+      <g transform="translate(0,2) scale(0.86)">
+        <use href="#star5" fill="url(#starG)" transform="translate(0,2) scale(0.62)"/>
+        <use href="#star5" fill="url(#starG)" transform="translate(0,-14) rotate(0)  scale(0.52)"/>
+        <use href="#star5" fill="url(#starG)" transform="translate(12,-7) rotate(18) scale(0.52)"/>
+        <use href="#star5" fill="url(#starG)" transform="translate(12,9)  rotate(36) scale(0.52)"/>
+        <use href="#star5" fill="url(#starG)" transform="translate(0,16)  rotate(54) scale(0.52)"/>
+        <use href="#star5" fill="url(#starG)" transform="translate(-12,9) rotate(72) scale(0.52)"/>
+        <use href="#star5" fill="url(#starG)" transform="translate(-12,-7) rotate(90) scale(0.52)"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- Global wires -->
+  <g class="wire wireDash">
+    <path d="M220 245 C 300 245, 330 210, 400 210"/>
+    <path d="M450 225 C 480 225, 500 225, 560 220"/>
+    <path d="M640 225 C 650 225, 690 225, 760 220"/>
+    <path d="M890 225 C 920 225, 940 200, 980 200"/>
+  </g>
+
+  <!-- Flow dots -->
+  <g>
+    <circle r="11" fill="url(#sig)">
+      <animateMotion dur="2.9s" repeatCount="indefinite"><mpath href="#flow1"/></animateMotion>
+      <animate attributeName="opacity" values="0;1;0" dur="2.9s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="10" fill="url(#sig)">
+      <animateMotion dur="3.2s" begin=".25s" repeatCount="indefinite"><mpath href="#flow2"/></animateMotion>
+      <animate attributeName="opacity" values="0;1;0" dur="3.2s" begin=".25s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="10" fill="url(#sig)">
+      <animateMotion dur="3.6s" begin=".5s" repeatCount="indefinite"><mpath href="#flow3"/></animateMotion>
+      <animate attributeName="opacity" values="0;1;0" dur="3.6s" begin=".5s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="11" fill="url(#sig)">
+      <animateMotion dur="3.0s" begin=".35s" repeatCount="indefinite"><mpath href="#flow4"/></animateMotion>
+      <animate attributeName="opacity" values="0;1;0" dur="3.0s" begin=".35s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="10" fill="url(#sig)">
+      <animateMotion dur="3.4s" begin=".65s" repeatCount="indefinite"><mpath href="#flow5"/></animateMotion>
+      <animate attributeName="opacity" values="0;1;0" dur="3.4s" begin=".65s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>

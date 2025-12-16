@@ -1,0 +1,527 @@
+<svg viewBox="0 0 1350 440" width="100%" height="440"
+     xmlns="http://www.w3.org/2000/svg" role="img"
+     aria-label="CNN-style recognition visualization of an uploaded green dragon illustration">
+  <defs>
+    <!-- Light yellow background -->
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"  stop-color="#FFF7CC"/>
+      <stop offset="55%" stop-color="#FFEEB0"/>
+      <stop offset="100%" stop-color="#FFE38A"/>
+    </linearGradient>
+
+    <!-- Rail -->
+    <linearGradient id="rail" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"  stop-color="#FFF2D3" stop-opacity="0.65"/>
+      <stop offset="100%" stop-color="#FFE7B8" stop-opacity="0.45"/>
+    </linearGradient>
+
+    <!-- Card -->
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"  stop-color="#FFF2D3" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#FFE7B8" stop-opacity="0.90"/>
+    </linearGradient>
+
+    <!-- Accent -->
+    <linearGradient id="wire" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#FFB15B" stop-opacity="0.35"/>
+      <stop offset="45%"  stop-color="#FF7A00" stop-opacity="0.70"/>
+      <stop offset="100%" stop-color="#C84B00" stop-opacity="0.35"/>
+    </linearGradient>
+
+    <!-- Soft glow -->
+    <filter id="softGlow" x="-70%" y="-70%" width="240%" height="240%">
+      <feGaussianBlur stdDeviation="2.8" result="b"/>
+      <feColorMatrix in="b" type="matrix"
+        values="1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 0.22 0" result="bb"/>
+      <feMerge>
+        <feMergeNode in="bb"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="shadow" x="-90%" y="-90%" width="280%" height="280%">
+      <feGaussianBlur stdDeviation="3.2" result="s"/>
+      <feOffset in="s" dx="0" dy="2" result="so"/>
+      <feColorMatrix in="so" type="matrix"
+        values="0 0 0 0 0
+                0 0 0 0 0
+                0 0 0 0 0
+                0 0 0 0.22 0" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- CNN-ish filters -->
+    <!-- Grayscale -->
+    <filter id="fGray">
+      <feColorMatrix type="matrix"
+        values="0.2126 0.7152 0.0722 0 0
+                0.2126 0.7152 0.0722 0 0
+                0.2126 0.7152 0.0722 0 0
+                0      0      0      1 0"/>
+      <feContrast slope="1.12" intercept="-0.06"/>
+    </filter>
+
+    <!-- Edge detect (Sobel-ish) -->
+    <filter id="fEdge" x="-10%" y="-10%" width="120%" height="120%">
+      <feColorMatrix type="matrix"
+        values="0.2126 0.7152 0.0722 0 0
+                0.2126 0.7152 0.0722 0 0
+                0.2126 0.7152 0.0722 0 0
+                0      0      0      1 0" result="g"/>
+      <feConvolveMatrix in="g" order="3" kernelMatrix="
+        -1 -1 -1
+        -1  8 -1
+        -1 -1 -1" preserveAlpha="true" result="e"/>
+      <feComponentTransfer in="e">
+        <feFuncR type="gamma" amplitude="1.0" exponent="0.75" offset="0"/>
+        <feFuncG type="gamma" amplitude="1.0" exponent="0.75" offset="0"/>
+        <feFuncB type="gamma" amplitude="1.0" exponent="0.75" offset="0"/>
+      </feComponentTransfer>
+    </filter>
+
+    <!-- Posterize / “feature map” look -->
+    <filter id="fPoster">
+      <feColorMatrix type="matrix"
+        values="0.2126 0.7152 0.0722 0 0
+                0.2126 0.7152 0.0722 0 0
+                0.2126 0.7152 0.0722 0 0
+                0      0      0      1 0" result="g"/>
+      <feComponentTransfer in="g">
+        <feFuncR type="discrete" tableValues="0 0.2 0.45 0.7 1"/>
+        <feFuncG type="discrete" tableValues="0 0.2 0.45 0.7 1"/>
+        <feFuncB type="discrete" tableValues="0 0.2 0.45 0.7 1"/>
+      </feComponentTransfer>
+      <feGaussianBlur stdDeviation="0.4"/>
+    </filter>
+
+    <!-- Heatmap tint (orange) -->
+    <filter id="fHeat">
+      <feColorMatrix type="matrix"
+        values="1.20 0.00 0.00 0 0
+                0.35 0.60 0.00 0 0
+                0.00 0.10 0.20 0 0
+                0    0    0    1 0"/>
+      <feGaussianBlur stdDeviation="0.25"/>
+    </filter>
+
+    <!-- “Vectorized” outline: edge + threshold + invert to dark lines -->
+    <filter id="fVector" x="-10%" y="-10%" width="120%" height="120%">
+      <feColorMatrix type="matrix"
+        values="0.2126 0.7152 0.0722 0 0
+                0.2126 0.7152 0.0722 0 0
+                0.2126 0.7152 0.0722 0 0
+                0      0      0      1 0" result="g"/>
+      <feConvolveMatrix in="g" order="3" kernelMatrix="
+        -1 -1 -1
+        -1  8 -1
+        -1 -1 -1" preserveAlpha="true" result="e"/>
+      <feComponentTransfer in="e" result="t">
+        <feFuncR type="table" tableValues="0 0 0 1 1"/>
+        <feFuncG type="table" tableValues="0 0 0 1 1"/>
+        <feFuncB type="table" tableValues="0 0 0 1 1"/>
+      </feComponentTransfer>
+      <!-- invert to dark lines -->
+      <feColorMatrix in="t" type="matrix"
+        values="-1 0 0 0 1
+                 0 -1 0 0 1
+                 0 0 -1 0 1
+                 0 0 0  1 0"/>
+      <feGaussianBlur stdDeviation="0.15"/>
+    </filter>
+
+    <!-- Notch masks (bottom cutout) -->
+    <mask id="m170" maskUnits="userSpaceOnUse" x="0" y="0" width="170" height="220">
+      <rect x="0" y="0" width="170" height="220" fill="white"/>
+      <circle cx="85" cy="220" r="30" fill="black"/>
+    </mask>
+    <mask id="m190" maskUnits="userSpaceOnUse" x="0" y="0" width="190" height="220">
+      <rect x="0" y="0" width="190" height="220" fill="white"/>
+      <circle cx="95" cy="220" r="30" fill="black"/>
+    </mask>
+    <mask id="m160" maskUnits="userSpaceOnUse" x="0" y="0" width="160" height="220">
+      <rect x="0" y="0" width="160" height="220" fill="white"/>
+      <circle cx="80" cy="220" r="30" fill="black"/>
+    </mask>
+    <mask id="m200" maskUnits="userSpaceOnUse" x="0" y="0" width="200" height="220">
+      <rect x="0" y="0" width="200" height="220" fill="white"/>
+      <circle cx="100" cy="220" r="30" fill="black"/>
+    </mask>
+    <mask id="m110" maskUnits="userSpaceOnUse" x="0" y="0" width="110" height="220">
+      <rect x="0" y="0" width="110" height="220" fill="white"/>
+      <circle cx="55" cy="220" r="30" fill="black"/>
+    </mask>
+
+    <!-- Dragon Ball orb bits (kept 1→7 stars) -->
+    <radialGradient id="orbFill" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#FFE8C7"/>
+      <stop offset="45%" stop-color="#FFB85F"/>
+      <stop offset="75%" stop-color="#FF7A00"/>
+      <stop offset="100%" stop-color="#B94100"/>
+    </radialGradient>
+    <radialGradient id="orbShine" cx="30%" cy="25%" r="45%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9"/>
+      <stop offset="55%" stop-color="#FFFFFF" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <path id="star5" d="M0,-7 L1.9,-2.2 L6.7,-2.2 L2.8,0.8 L4.3,6.2 L0,3.3 L-4.3,6.2 L-2.8,0.8 L-6.7,-2.2 L-1.9,-2.2 Z"/>
+
+    <!-- Moving “kernel” scan box -->
+    <style>
+      .card { fill: url(#card); stroke: #C84B00; stroke-opacity: .20; stroke-width: 1.3; }
+      .tiny  { font: 800 11px system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; fill: #4A2400; opacity: .96; }
+      .subL  { font: 650 12px system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; fill: #4A2400; opacity: .92; }
+      .stage { font: 800 11px system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; fill: #7A3C00; opacity: .78; letter-spacing:.6px; }
+
+      .rail { fill: url(#rail); stroke: #C84B00; stroke-opacity: .12; stroke-width: 1.2; }
+      .wire { stroke: url(#wire); stroke-width: 2.4; fill: none; stroke-linecap: round; opacity: .95; }
+      .wireDash { stroke-dasharray: 8 12; animation: dash 6s linear infinite; }
+      @keyframes dash { to { stroke-dashoffset: -220; } }
+
+      .kernel { fill: none; stroke: #FF7A00; stroke-width: 3; stroke-opacity: .75; filter:url(#softGlow); }
+      .orb { filter:url(#shadow); }
+      .orbRing { fill:none; stroke:#C84B00; stroke-opacity:.30; stroke-width:2.2; }
+      .orbPulse { transform-box: fill-box; transform-origin:center; animation: orbPulse 2.4s ease-in-out infinite; }
+      @keyframes orbPulse { 0%{transform:scale(1);opacity:.85} 50%{transform:scale(1.10);opacity:.35} 100%{transform:scale(1);opacity:.85} }
+
+      @media (prefers-reduced-motion: reduce) {
+        .wireDash { animation: none !important; }
+        .orbPulse { animation: none !important; }
+      }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="1350" height="440" rx="22" fill="url(#bg)"/>
+
+  <!-- Connected rail -->
+  <rect x="24" y="120" width="1302" height="255" rx="28" class="rail"/>
+
+  <!-- Stage labels -->
+  <g>
+    <text x="125"  y="140" text-anchor="middle" class="stage">INPUT</text>
+    <text x="345"  y="140" text-anchor="middle" class="stage">CONV</text>
+    <text x="545"  y="140" text-anchor="middle" class="stage">POOL</text>
+    <text x="750"  y="140" text-anchor="middle" class="stage">CONV</text>
+    <text x="950"  y="140" text-anchor="middle" class="stage">FEATURES</text>
+    <text x="1130" y="140" text-anchor="middle" class="stage">GAP</text>
+    <text x="1280" y="140" text-anchor="middle" class="stage">VECTOR</text>
+  </g>
+
+  <!-- Title / Subtitle (kept exactly as you gave) -->
+  <text x="675" y="50" text-anchor="middle"
+        font-size="38" fill="#F97316" stroke="#111827" stroke-width="3"
+        font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif"
+        font-weight="900" letter-spacing="0.3">
+    Gokou · Data Science · AI · Quant
+  </text>
+
+  <text x="675" y="84"
+        text-anchor="middle"
+        font-size="16"
+        fill="#4A2400"
+        font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif"
+        font-weight="600"
+        letter-spacing="0.3">
+    UPenn AI · Harvard DS · WSU CS · Machine Learning · Quant Trading · Research
+  </text>
+
+  <!-- Embedded image (data URI) -->
+  <defs>
+    <image id="srcImg"
+       href="shenron.png"
+       x="0" y="0" width="256" height="256"
+       preserveAspectRatio="xMidYMid meet"/>
+  </defs>
+
+  <!-- PIPELINE CARDS -->
+  <!-- Helper: each preview window is 138x138-ish -->
+  <!-- 1) Input -->
+  <g transform="translate(40,135)">
+    <rect class="card" x="0" y="0" width="170" height="220" rx="16" mask="url(#m170)"/>
+    <text class="tiny" x="16" y="28">Input</text>
+    <text class="subL" x="16" y="50">RGB image</text>
+
+    <g transform="translate(16,66)">
+      <rect x="0" y="0" width="138" height="138" rx="12" fill="#fff" opacity=".45"/>
+      <g clip-path="url(#clipA)">
+        <use href="#srcImg" x="0" y="0" width="138" height="138"/>
+      </g>
+
+      <!-- scanning kernel -->
+      <rect class="kernel" x="8" y="10" width="34" height="34" rx="8">
+        <animateTransform attributeName="transform" type="translate"
+          values="0 0; 78 0; 78 68; 0 68; 0 96; 78 96; 78 0; 0 0"
+          keyTimes="0; .18; .34; .50; .68; .84; .94; 1"
+          dur="3.4s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
+    <!-- 1-star ball -->
+    <g class="orb" transform="translate(85,220)">
+      <circle cx="0" cy="0" r="26" fill="url(#orbFill)"/>
+      <circle cx="-7" cy="-9" r="18" fill="url(#orbShine)" opacity=".9"/>
+      <circle cx="0" cy="0" r="28" class="orbRing"/>
+      <g class="orbPulse"><circle cx="0" cy="0" r="28" class="orbRing" opacity=".45"/></g>
+      <g transform="translate(0,2) scale(0.92)">
+        <use href="#star5" fill="url(#starG)" transform="translate(0,2) scale(0.78)"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- clip paths for previews -->
+  <defs>
+    <clipPath id="clipA"><rect x="16" y="66" width="138" height="138" rx="12"/></clipPath>
+    <clipPath id="clipB"><rect x="16" y="66" width="158" height="138" rx="12"/></clipPath>
+  </defs>
+
+  <!-- 2) Conv: grayscale + edges -->
+  <g transform="translate(250,135)">
+    <rect class="card" x="0" y="0" width="190" height="220" rx="16" mask="url(#m190)"/>
+    <text class="tiny" x="16" y="28">Conv 3×3</text>
+    <text class="subL" x="16" y="50">edges / low-level features</text>
+
+    <g transform="translate(16,66)">
+      <rect x="0" y="0" width="158" height="138" rx="12" fill="#fff" opacity=".45"/>
+      <g filter="url(#fEdge)">
+        <use href="#srcImg" x="0" y="0" width="158" height="138"/>
+      </g>
+      <g opacity=".45" filter="url(#softGlow)">
+        <rect x="0" y="0" width="158" height="138" rx="12" fill="none" stroke="#FF7A00" stroke-width="2"/>
+      </g>
+      <rect class="kernel" x="14" y="16" width="34" height="34" rx="8">
+        <animateTransform attributeName="transform" type="translate"
+          values="0 0; 92 0; 92 64; 0 64; 0 92; 92 92; 92 0; 0 0"
+          keyTimes="0; .18; .34; .50; .68; .84; .94; 1"
+          dur="3.8s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
+    <!-- 2-star ball -->
+    <g class="orb" transform="translate(95,220)">
+      <circle cx="0" cy="0" r="26" fill="url(#orbFill)"/>
+      <circle cx="-7" cy="-9" r="18" fill="url(#orbShine)" opacity=".9"/>
+      <circle cx="0" cy="0" r="28" class="orbRing"/>
+      <g class="orbPulse" style="animation-delay:.15s"><circle cx="0" cy="0" r="28" class="orbRing" opacity=".45"/></g>
+      <g transform="translate(0,2) scale(0.92)">
+        <use href="#star5" fill="url(#starG)" transform="translate(-8,4) scale(0.62)"/>
+        <use href="#star5" fill="url(#starG)" transform="translate(8,4) scale(0.62)"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- 3) Pool: downsample / coarser -->
+  <g transform="translate(465,135)">
+    <rect class="card" x="0" y="0" width="160" height="220" rx="16" mask="url(#m160)"/>
+    <text class="tiny" x="16" y="28">MaxPool</text>
+    <text class="subL" x="16" y="50">↓ spatial resolution</text>
+
+    <g transform="translate(16,66)">
+      <rect x="0" y="0" width="128" height="138" rx="12" fill="#fff" opacity=".45"/>
+      <g filter="url(#fGray)">
+        <!-- show smaller content centered -->
+        <g transform="translate(8,10)">
+          <use href="#srcImg" x="0" y="0" width="112" height="112" style="image-rendering:pixelated"/>
+        </g>
+      </g>
+      <rect x="8" y="10" width="112" height="112" rx="10" fill="none" stroke="#C84B00" stroke-opacity=".22"/>
+      <text class="subL" x="6" y="134" font-size="11" opacity=".78">224→112</text>
+    </g>
+
+    <!-- 3-star ball -->
+    <g class="orb" transform="translate(80,220)">
+      <circle cx="0" cy="0" r="24" fill="url(#orbFill)"/>
+      <circle cx="-6" cy="-8" r="16" fill="url(#orbShine)" opacity=".9"/>
+      <circle cx="0" cy="0" r="26" class="orbRing"/>
+      <g class="orbPulse" style="animation-delay:.3s"><circle cx="0" cy="0" r="26" class="orbRing" opacity=".45"/></g>
+      <g transform="translate(0,2) scale(0.9)">
+        <use href="#star5" fill="url(#starG)" transform="translate(-9,0) scale(0.55)"/>
+        <use href="#star5" fill="url(#starG)" transform="translate(0,10) scale(0.55)"/>
+        <use href="#star5" fill="url(#starG)" transform="translate(9,0) scale(0.55)"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- 4) Conv: posterized + heat tint -->
+  <g transform="translate(650,135)">
+    <rect class="card" x="0" y="0" width="200" height="220" rx="16" mask="url(#m200)"/>
+    <text class="tiny" x="16" y="28">Conv 3×3</text>
+    <text class="subL" x="16" y="50">mid-level activations</text>
+
+    <g transform="translate(16,66)">
+      <rect x="0" y="0" width="168" height="138" rx="12" fill="#fff" opacity=".45"/>
+      <g filter="url(#fPoster)">
+        <use href="#srcImg" x="0" y="0" width="168" height="138"/>
+      </g>
+      <g filter="url(#fHeat)" opacity=".85">
+        <use href="#srcImg" x="0" y="0" width="168" height="138"/>
+      </g>
+      <rect x="0" y="0" width="168" height="138" rx="12" fill="none" stroke="#FF7A00" stroke-opacity=".25" stroke-width="2"/>
+    </g>
+
+    <!-- 4-star ball -->
+    <g class="orb" transform="translate(100,220)">
+      <circle cx="0" cy="0" r="26" fill="url(#orbFill)"/>
+      <circle cx="-7" cy="-9" r="18" fill="url(#orbShine)" opacity=".9"/>
+      <circle cx="0" cy="0" r="28" class="orbRing"/>
+      <g class="orbPulse" style="animation-delay:.45s"><circle cx="0" cy="0" r="28" class="orbRing" opacity=".45"/></g>
+      <g transform="translate(0,2) scale(0.9)">
+        <use href="#star5" fill="url(#starG)" transform="translate(-9,-1) scale(0.55)"/>
+        <use href="#star5" fill="url(#starG)" transform="translate(9,-1) scale(0.55)"/>
+        <use href="#star5" fill="url(#starG)" transform="translate(-9,11) scale(0.55)"/>
+        <use href="#star5" fill="url(#starG)" transform="translate(9,11) scale(0.55)"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- 5) Deep features: edges + stronger threshold -->
+  <g transform="translate(870,135)">
+    <rect class="card" x="0" y="0" width="160" height="220" rx="16" mask="url(#m160)"/>
+    <text class="tiny" x="16" y="28">Features</text>
+    <text class="subL" x="16" y="50">salient structure</text>
+
+    <g transform="translate(16,66)">
+      <rect x="0" y="0" width="128" height="138" rx="12" fill="#fff" opacity=".45"/>
+      <g filter="url(#fEdge)" opacity=".95">
+        <use href="#srcImg" x="0" y="0" width="128" height="138"/>
+      </g>
+      <g opacity=".30" filter="url(#softGlow)">
+        <rect x="0" y="0" width="128" height="138" rx="12" fill="none" stroke="#B94100" stroke-width="2"/>
+      </g>
+    </g>
+
+    <!-- 5-star ball -->
+    <g class="orb" transform="translate(80,220)">
+      <circle cx="0" cy="0" r="25" fill="url(#orbFill)"/>
+      <circle cx="-7" cy="-9" r="17" fill="url(#orbShine)" opacity=".9"/>
+      <circle cx="0" cy="0" r="27" class="orbRing"/>
+      <g class="orbPulse" style="animation-delay:.55s"><circle cx="0" cy="0" r="27" class="orbRing" opacity=".45"/></g>
+      <g transform="translate(0,2) scale(0.88)">
+        <use href="#star5" fill="url(#starG)" transform="translate(0,-11) scale(0.52)"/>
+        <use href="#star5" fill="url(#starG)" transform="translate(-11,0) scale(0.52)"/>
+        <use href="#star5" fill="url(#starG)" transform="translate(11,0) scale(0.52)"/>
+        <use href="#star5" fill="url(#starG)" transform="translate(-7,11) scale(0.52)"/>
+        <use href="#star5" fill="url(#starG)" transform="translate(7,11) scale(0.52)"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- 6) GAP: vectorization -->
+  <g transform="translate(1045,135)">
+    <rect class="card" x="0" y="0" width="170" height="220" rx="16" mask="url(#m170)"/>
+    <text class="tiny" x="16" y="28">Global Avg Pool</text>
+    <text class="subL" x="16" y="50">feature vector</text>
+
+    <g transform="translate(16,74)">
+      <!-- tiny “channels” bars -->
+      <rect x="0" y="0" width="138" height="96" rx="14" fill="#fff" opacity=".35"/>
+      <g transform="translate(10,10)">
+        <g>
+          <rect x="0"  y="0" width="10" height="76" rx="5" fill="#FF7A00" opacity=".18"/>
+          <rect x="14" y="12" width="10" height="64" rx="5" fill="#FF7A00" opacity=".22"/>
+          <rect x="28" y="28" width="10" height="48" rx="5" fill="#FF7A00" opacity=".28"/>
+          <rect x="42" y="8" width="10" height="68" rx="5" fill="#FF7A00" opacity=".20"/>
+          <rect x="56" y="18" width="10" height="58" rx="5" fill="#FF7A00" opacity=".24"/>
+          <rect x="70" y="34" width="10" height="42" rx="5" fill="#FF7A00" opacity=".30"/>
+          <rect x="84" y="22" width="10" height="54" rx="5" fill="#FF7A00" opacity=".26"/>
+          <rect x="98" y="6" width="10" height="70" rx="5" fill="#FF7A00" opacity=".20"/>
+          <rect x="112" y="26" width="10" height="50" rx="5" fill="#FF7A00" opacity=".28"/>
+        </g>
+        <rect x="0" y="0" width="122" height="76" rx="12" fill="none" stroke="#C84B00" stroke-opacity=".28"/>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="2.2s" repeatCount="indefinite"/>
+      </g>
+      <text class="subL" x="0" y="120" font-size="11" opacity=".78">128 dims</text>
+    </g>
+
+    <!-- 6-star ball -->
+    <g class="orb" transform="translate(85,220)">
+      <circle cx="0" cy="0" r="26" fill="url(#orbFill)"/>
+      <circle cx="-7" cy="-9" r="18" fill="url(#orbShine)" opacity=".9"/>
+      <circle cx="0" cy="0" r="28" class="orbRing"/>
+      <g class="orbPulse" style="animation-delay:.68s"><circle cx="0" cy="0" r="28" class="orbRing" opacity=".45"/></g>
+      <g transform="translate(0,2) scale(0.88)">
+        <use href="#star5" fill="url(#starG)" transform="translate(-12,-6) scale(0.48)"/>
+        <use href="#star5" fill="url(#starG)" transform="translate(0,-8)  scale(0.48)"/>
+        <use href="#star5" fill="url(#starG)" transform="translate(12,-6) scale(0.48)"/>
+        <use href="#star5" fill="url(#starG)" transform="translate(-12,8) scale(0.48)"/>
+        <use href="#star5" fill="url(#starG)" transform="translate(0,10)  scale(0.48)"/>
+        <use href="#star5" fill="url(#starG)" transform="translate(12,8)  scale(0.48)"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- 7) “SVG-like” outline -->
+  <g transform="translate(1225,135)">
+    <rect class="card" x="0" y="0" width="110" height="220" rx="16" mask="url(#m110)"/>
+    <text class="tiny" x="14" y="28">Vector</text>
+    <text class="subL" x="14" y="50">outline / logits</text>
+
+    <g transform="translate(10,66)">
+      <rect x="0" y="0" width="90" height="138" rx="12" fill="#fff" opacity=".38"/>
+      <g filter="url(#fVector)">
+        <use href="#srcImg" x="0" y="0" width="90" height="138"/>
+      </g>
+      <rect x="0" y="0" width="90" height="138" rx="12" fill="none" stroke="#111827" stroke-opacity=".35"/>
+    </g>
+
+    <!-- 7-star ball -->
+    <g class="orb" transform="translate(55,220)">
+      <circle cx="0" cy="0" r="24" fill="url(#orbFill)"/>
+      <circle cx="-6" cy="-8" r="16" fill="url(#orbShine)" opacity=".9"/>
+      <circle cx="0" cy="0" r="26" class="orbRing"/>
+      <g class="orbPulse" style="animation-delay:.85s"><circle cx="0" cy="0" r="26" class="orbRing" opacity=".45"/></g>
+      <g transform="translate(0,2) scale(0.82)">
+        <use href="#star5" fill="url(#starG)" transform="translate(0,2) scale(0.60)"/>
+        <use href="#star5" fill="url(#starG)" transform="translate(0,-14) scale(0.48)"/>
+        <use href="#star5" fill="url(#starG)" transform="translate(12,-7) rotate(18) scale(0.48)"/>
+        <use href="#star5" fill="url(#starG)" transform="translate(12,9)  rotate(36) scale(0.48)"/>
+        <use href="#star5" fill="url(#starG)" transform="translate(0,16)  rotate(54) scale(0.48)"/>
+        <use href="#star5" fill="url(#starG)" transform="translate(-12,9) rotate(72) scale(0.48)"/>
+        <use href="#star5" fill="url(#starG)" transform="translate(-12,-7) rotate(90) scale(0.48)"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- Connecting wires -->
+  <g class="wire wireDash">
+    <path d="M220 245 C 305 245, 330 210, 420 210"/>
+    <path d="M440 225 C 495 225, 520 225, 610 220"/>
+    <path d="M625 225 C 700 225, 720 225, 810 220"/>
+    <path d="M830 225 C 900 225, 930 225, 990 220"/>
+    <path d="M1015 225 C 1065 225, 1100 220, 1160 210"/>
+    <path d="M1185 220 C 1225 220, 1275 220, 1310 220"/>
+  </g>
+
+  <!-- Flow dots -->
+  <g>
+    <circle r="11" fill="url(#sig)">
+      <animateMotion dur="2.9s" repeatCount="indefinite" path="M220 245 C 305 245, 330 210, 420 210"/>
+      <animate attributeName="opacity" values="0;1;0" dur="2.9s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="10" fill="url(#sig)">
+      <animateMotion dur="3.2s" begin=".25s" repeatCount="indefinite" path="M440 225 C 495 225, 520 225, 610 220"/>
+      <animate attributeName="opacity" values="0;1;0" dur="3.2s" begin=".25s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="10" fill="url(#sig)">
+      <animateMotion dur="3.5s" begin=".5s" repeatCount="indefinite" path="M625 225 C 700 225, 720 225, 810 220"/>
+      <animate attributeName="opacity" values="0;1;0" dur="3.5s" begin=".5s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="10" fill="url(#sig)">
+      <animateMotion dur="3.0s" begin=".35s" repeatCount="indefinite" path="M830 225 C 900 225, 930 225, 990 220"/>
+      <animate attributeName="opacity" values="0;1;0" dur="3.0s" begin=".35s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="11" fill="url(#sig)">
+      <animateMotion dur="3.2s" begin=".65s" repeatCount="indefinite" path="M1015 225 C 1065 225, 1100 220, 1160 210"/>
+      <animate attributeName="opacity" values="0;1;0" dur="3.2s" begin=".65s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="10" fill="url(#sig)">
+      <animateMotion dur="3.4s" begin=".9s" repeatCount="indefinite" path="M1185 220 C 1225 220, 1275 220, 1310 220"/>
+      <animate attributeName="opacity" values="0;1;0" dur="3.4s" begin=".9s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>

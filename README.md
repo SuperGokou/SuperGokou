@@ -1,6 +1,7 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/SuperGokou/SuperGokou/main/shenron_cnn.svg" width="900" alt="shenron_cnn">
+  <img src="./shenron.svg" width="900" alt="shenron_cnn">
 </p>
+
 
 <table>
 <tr>

@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="cnn.svg" alt="cnn_dragon" width="900" />
+  <img src="cnn.svg" alt="cnn_dragon" width="900"/>
 </p>
 
 <table>

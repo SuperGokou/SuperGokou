@@ -1,5 +1,5 @@
-<p align="center">
-  <img src="cnn.svg" alt="cnn_dragon" width="900"/>
+r<p align="center">
+  <img src="shenron.svg" alt="cnn_dragon" width="900"/>
 </p>
 
 <table>

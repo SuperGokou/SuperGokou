@@ -1,8 +1,6 @@
-<div align="center" style="display: flex; justify-content: center;">
-
-  <img src="cnn.svg" alt="cnn_dragon" width="100%" />
-
-</div>
+<p align="center">
+  <img src="cnn.svg" alt="cnn_dragon" width="900" />
+</p>
 
 <table>
 <tr>

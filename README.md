@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/SuperGokou/SuperGokou/main/shenron.svg" width="900" alt="shenron_cnn">
+  <img src="./shenron_cnn.svg" width="900" alt="shenron_cnn">
 </p>
 
 

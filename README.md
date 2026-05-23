@@ -6,13 +6,28 @@
 <table>
 <tr>
 <td width="60%">
-<h2>👋 Hi, I'm <span style="color:#F97316;">Ming</span>!</h2>
+<h2>Hi, I'm <span style="color:#F97316;">Ming</span>!</h2>
   <ul>
-    <li>🚀 <strong>Founder:</strong> Building an AI startup at the intersection of ML & Quant Finance.</li>
-    <li>💹 <strong>Focus:</strong> Quant Strategies, Trading Systems, and MLOps.</li>
-    <li>🌍 <strong>Global:</strong> CN · SG · US · UK</li>
-    <li>🌐 <strong>More About Me:</strong> <a href="https://www.seas.upenn.edu/~xiaming/">My Portfolio</a></li>
-    <li>💼 Tech enthusiast and entrepreneur </li>
+    <li>
+      <img src="./icons/dbz-pod.svg" width="20" align="absmiddle" style="vertical-align:-3px;margin-right:6px" alt="" />
+      <strong>Founder:</strong> Building an AI startup at the intersection of ML & Quant Finance.
+    </li>
+    <li>
+      <img src="./icons/dbz-scouter.svg" width="20" align="absmiddle" style="vertical-align:-3px;margin-right:6px" alt="" />
+      <strong>Focus:</strong> Quant Strategies, Trading Systems, and MLOps.
+    </li>
+    <li>
+      <img src="./icons/dbz-ball.svg" width="20" align="absmiddle" style="vertical-align:-3px;margin-right:6px" alt="" />
+      <strong>Global:</strong> CN · SG · US · UK
+    </li>
+    <li>
+      <img src="./icons/dbz-radar.svg" width="20" align="absmiddle" style="vertical-align:-3px;margin-right:6px" alt="" />
+      <strong>More About Me:</strong> <a href="https://www.seas.upenn.edu/~xiaming/">My Portfolio</a>
+    </li>
+    <li>
+      <img src="./icons/dbz-capsule.svg" width="20" align="absmiddle" style="vertical-align:-3px;margin-right:6px" alt="" />
+      Tech enthusiast and entrepreneur
+    </li>
     </ul>
     </td>
     <td width="50%" align="center">
@@ -25,7 +40,10 @@
 <table>
 <tr>
   <td valign="top" width="60%">
-    <h2>🛠 Skills & Arsenal</h2> 
+    <h2>
+      <img src="./icons/dbz-goku-stance.png" width="42" align="absmiddle" style="vertical-align:-10px;margin-right:8px" alt="" />
+      Skills & Arsenal
+    </h2> 
     <br /><br />
       <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white" alt="Python" />
       <img src="https://img.shields.io/badge/R-276DC3?style=flat&logo=r&logoColor=white" alt="R" />
@@ -93,7 +111,10 @@
 
 
 
-## 📡 Network & Socials
+<h2>
+  <img src="./icons/dbz-shenron-pixel.png" width="42" align="absmiddle" style="vertical-align:-10px;margin-right:8px" alt="" />
+  Network & Socials
+</h2>
 
 <p align="center">
   <span>

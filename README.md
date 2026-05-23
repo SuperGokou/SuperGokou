@@ -9,23 +9,23 @@
 <h2>Hi, I'm Ming!</h2>
   <ul>
     <li>
-      <img src="./icons/dbz-pod.svg" width="16" align="middle" alt="" />
+      <img src="./icons/dbz-pod.svg" width="16" align="top" alt="" />
       <strong>Founder:</strong> Building an AI startup at the intersection of ML & Quant Finance.
     </li>
     <li>
-      <img src="./icons/dbz-scouter.svg" width="16" align="middle" alt="" />
+      <img src="./icons/dbz-scouter.svg" width="16" align="top" alt="" />
       <strong>Focus:</strong> Quant Strategies, Trading Systems, and MLOps.
     </li>
     <li>
-      <img src="./icons/dbz-ball.svg" width="16" align="middle" alt="" />
+      <img src="./icons/dbz-ball.svg" width="16" align="top" alt="" />
       <strong>Global:</strong> CN · SG · US · UK
     </li>
     <li>
-      <img src="./icons/dbz-radar.svg" width="16" align="middle" alt="" />
+      <img src="./icons/dbz-radar.svg" width="16" align="top" alt="" />
       <strong>More About Me:</strong> <a href="https://www.seas.upenn.edu/~xiaming/">My Portfolio</a>
     </li>
     <li>
-      <img src="./icons/dbz-capsule.svg" width="16" align="middle" alt="" />
+      <img src="./icons/dbz-capsule.svg" width="16" align="top" alt="" />
       Tech enthusiast and entrepreneur
     </li>
     </ul>

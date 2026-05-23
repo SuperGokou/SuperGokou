@@ -32,7 +32,7 @@
   <img src="./icons/spacer.svg" width="900" height="1" alt="" />
 </td>
     <td width="50%" align="center">
-      <img src="gokou_pnl.svg" alt="Gokou PnL Dragon" width="600" />
+      <img src="gokou_pnl.svg" alt="Gokou PnL Dragon" title="CS · DS · AI · ML · Quant · Trading — career PnL" width="600" />
 </td>
 </tr>
 </table>

@@ -6,7 +6,7 @@
 <table>
 <tr>
 <td width="60%">
-<h2>Hi, I'm <span style="color:#F97316;">Ming</span>!</h2>
+<h2>Hi, I'm <img src="./icons/text-ming.svg" height="32" align="absmiddle" alt="Ming" />!</h2>
   <ul>
     <li>
       <img src="./icons/dbz-pod.svg" width="20" align="absmiddle" style="vertical-align:-3px;margin-right:6px" alt="" />

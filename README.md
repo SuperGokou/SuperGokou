@@ -6,26 +6,26 @@
 <table>
 <tr>
 <td width="60%">
-<h2>Hi, I'm <img src="./icons/text-ming.svg" height="22" width="64" align="absmiddle" alt="Ming" />!</h2>
+<h2>Hi, I'm Ming!</h2>
   <ul>
     <li>
-      <img src="./icons/dbz-pod.svg" width="20" align="absmiddle" style="vertical-align:-3px;margin-right:6px" alt="" />
+      <img src="./icons/dbz-pod.svg" width="16" align="middle" alt="" />
       <strong>Founder:</strong> Building an AI startup at the intersection of ML & Quant Finance.
     </li>
     <li>
-      <img src="./icons/dbz-scouter.svg" width="20" align="absmiddle" style="vertical-align:-3px;margin-right:6px" alt="" />
+      <img src="./icons/dbz-scouter.svg" width="16" align="middle" alt="" />
       <strong>Focus:</strong> Quant Strategies, Trading Systems, and MLOps.
     </li>
     <li>
-      <img src="./icons/dbz-ball.svg" width="20" align="absmiddle" style="vertical-align:-3px;margin-right:6px" alt="" />
+      <img src="./icons/dbz-ball.svg" width="16" align="middle" alt="" />
       <strong>Global:</strong> CN · SG · US · UK
     </li>
     <li>
-      <img src="./icons/dbz-radar.svg" width="20" align="absmiddle" style="vertical-align:-3px;margin-right:6px" alt="" />
+      <img src="./icons/dbz-radar.svg" width="16" align="middle" alt="" />
       <strong>More About Me:</strong> <a href="https://www.seas.upenn.edu/~xiaming/">My Portfolio</a>
     </li>
     <li>
-      <img src="./icons/dbz-capsule.svg" width="20" align="absmiddle" style="vertical-align:-3px;margin-right:6px" alt="" />
+      <img src="./icons/dbz-capsule.svg" width="16" align="middle" alt="" />
       Tech enthusiast and entrepreneur
     </li>
     </ul>

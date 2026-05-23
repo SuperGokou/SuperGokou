@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./shenron_cnn.svg" width="900" alt="shenron_cnn">
+  <img src="./shenron_cnn.svg" width="900" alt="Shenron CNN pipeline: input → preprocess → conv → relu → pool → flatten → output" title="Shenron CNN pipeline — Gokou · Data Science · AI · Quant">
 </p>
 
 

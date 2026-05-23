@@ -32,7 +32,7 @@
   <img src="./icons/spacer.svg" width="900" height="1" alt="" />
 </td>
     <td width="50%" align="center">
-      <img src="gokou_pnl.svg" alt="Gokou PnL Dragon" width="100%" />
+      <img src="gokou_pnl.svg" alt="Gokou PnL Dragon" width="600" />
 </td>
 </tr>
 </table>

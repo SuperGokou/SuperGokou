@@ -41,7 +41,7 @@
 <tr>
   <td valign="top" width="60%">
     <h2>
-      <img src="./icons/dbz-goku-kameha.gif" height="42" align="absmiddle" style="vertical-align:-12px;margin-right:8px" alt="" />
+      <img src="./icons/dbz-goku-kameha.gif" width="100" align="absmiddle" style="vertical-align:-12px;margin-right:8px" alt="" />
       Skills & Arsenal
     </h2> 
     <br /><br />
@@ -115,7 +115,7 @@
 <tr>
 <td valign="top" width="100%">
 <h2>
-  <img src="./icons/dbz-duo-halo.gif" height="42" align="absmiddle" style="vertical-align:-12px;margin-right:8px" alt="" />
+  <img src="./icons/dbz-duo-halo.gif" width="100" align="absmiddle" style="vertical-align:-12px;margin-right:8px" alt="" />
   Network & Socials
 </h2>
 

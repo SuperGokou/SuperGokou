@@ -113,8 +113,9 @@
 
 
 <table width="100%">
+<colgroup><col width="900"></colgroup>
 <tr>
-<td valign="top" width="100%">
+<td valign="top">
 <h2>
   <img src="./icons/dbz-duo-halo.gif" width="100" align="absmiddle" style="vertical-align:-12px;margin-right:8px" alt="" />
   Network & Socials

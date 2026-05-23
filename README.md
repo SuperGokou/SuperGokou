@@ -4,9 +4,8 @@
 
 
 <table width="100%">
-<colgroup><col width="540"><col width="360"></colgroup>
 <tr>
-<td valign="top">
+<td valign="top" width="60%">
 <h2>Hi, I'm Ming!</h2>
   <ul>
     <li>
@@ -31,7 +30,7 @@
     </li>
   </ul>
 </td>
-<td valign="middle" align="center">
+<td valign="middle" width="40%" align="center">
   <img src="gokou_pnl.svg" alt="Gokou PnL Dragon" width="100%" />
 </td>
 </tr>
@@ -39,9 +38,8 @@
 
 
 <table width="100%">
-<colgroup><col width="540"><col width="360"></colgroup>
 <tr>
-  <td valign="top">
+  <td valign="top" width="60%">
     <h2>
       <img src="./icons/dbz-goku-kameha.gif" width="100" align="absmiddle" style="vertical-align:-12px;margin-right:8px" alt="" />
       Skills & Arsenal
@@ -100,7 +98,7 @@
       <img src="https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white" alt="Node.js" />
       <img src="https://img.shields.io/badge/Express.js-000000?style=flat&logo=express&logoColor=white" alt="Express.js" />
   </td>
-  <td valign="center">
+  <td valign="center" width="40%">
     <div align="center">
       <img src="https://awesome-github-stats.azurewebsites.net/user-stats/SuperGokou?cardType=level&theme=default" alt="GitHub Stats" width="100%" />
       <br /><br />
@@ -113,9 +111,8 @@
 
 
 <table width="100%">
-<colgroup><col width="900"></colgroup>
 <tr>
-<td valign="top">
+<td valign="top" width="100%">
 <h2>
   <img src="./icons/dbz-duo-halo.gif" width="100" align="absmiddle" style="vertical-align:-12px;margin-right:8px" alt="" />
   Network & Socials

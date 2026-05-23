@@ -5,7 +5,7 @@
 
 <table width="100%">
 <tr>
-<td valign="top" width="40%">
+<td valign="top" width="60%">
 <h2>Hi, I'm Ming!</h2>
   <ul>
     <li>
@@ -30,10 +30,7 @@
     </li>
   </ul>
 </td>
-<td valign="middle" width="25%" align="center">
-  <img src="./icons/dbz-saiyan-anim.gif" alt="Pixel-art Saiyan" width="100%" />
-</td>
-<td valign="middle" width="35%" align="center">
+<td valign="middle" width="40%" align="center">
   <img src="gokou_pnl.svg" alt="Gokou PnL Dragon" width="100%" />
 </td>
 </tr>
@@ -46,7 +43,8 @@
     <h2>
       <img src="./icons/dbz-goku-kameha.gif" width="100" align="absmiddle" style="vertical-align:-12px;margin-right:8px" alt="" />
       Skills & Arsenal
-    </h2>
+    </h2> 
+    <br /><br />
       <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white" alt="Python" />
       <img src="https://img.shields.io/badge/R-276DC3?style=flat&logo=r&logoColor=white" alt="R" />
       <img src="https://img.shields.io/badge/SQL-003B57?style=flat&logo=databricks&logoColor=white" alt="SQL" />

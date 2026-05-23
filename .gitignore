@@ -1,9 +1,34 @@
+# Local preview artifacts
 index.html
 readme_body.html
-.claude/
+
+# Local processing/helper scripts
 render_readme.py
 remove_bg.py
 process_goku.py
 process_goku_anim.py
 process_shenron.py
 process_duo.py
+process_gogeta.py
+
+# Editor / OS / build noise
+.claude/
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-error.log*

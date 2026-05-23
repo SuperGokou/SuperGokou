@@ -41,7 +41,7 @@
 <tr>
   <td valign="top" width="60%">
     <h2>
-      <img src="./icons/dbz-goku-anim.gif" width="42" align="absmiddle" style="vertical-align:-10px;margin-right:8px" alt="" />
+      <img src="./icons/dbz-goku-kameha.gif" height="42" align="absmiddle" style="vertical-align:-12px;margin-right:8px" alt="" />
       Skills & Arsenal
     </h2> 
     <br /><br />

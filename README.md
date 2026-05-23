@@ -30,8 +30,8 @@
     </li>
     </ul>
     </td>
-    <td width="50%" align="center">
-      <img src="gokou_pnl.svg" alt="Gokou PnL Dragon" width="100%" />
+    <td width="40%" align="center">
+      <img src="./icons/dbz-saiyan-anim.gif" alt="Pixel-art Saiyan" width="80%" />
     </td>
   </tr>
 </table>

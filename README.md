@@ -111,6 +111,9 @@
 
 
 
+<table>
+<tr>
+<td valign="top" width="100%">
 <h2>
   <img src="./icons/dbz-duo-halo.gif" height="42" align="absmiddle" style="vertical-align:-12px;margin-right:8px" alt="" />
   Network & Socials
@@ -139,3 +142,6 @@
     />
   </span>
 </p>
+</td>
+</tr>
+</table>

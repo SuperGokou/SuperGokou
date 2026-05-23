@@ -3,7 +3,7 @@
 </p>
 
 
-<table width="100%">
+<table width="1100">
 <tr>
 <td valign="top" width="60%">
 <h2>Hi, I'm Ming!</h2>
@@ -37,7 +37,7 @@
 </table>
 
 
-<table width="100%">
+<table width="1100">
 <tr>
   <td valign="top" width="60%">
     <h2>
@@ -110,7 +110,7 @@
 
 
 
-<table width="100%">
+<table width="1100">
 <tr>
 <td valign="top" width="100%">
 <h2>

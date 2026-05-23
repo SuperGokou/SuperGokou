@@ -112,7 +112,7 @@
 
 
 <h2>
-  <img src="./icons/dbz-shenron-pixel.png" width="42" align="absmiddle" style="vertical-align:-10px;margin-right:8px" alt="" />
+  <img src="./icons/dbz-duo-halo.gif" height="42" align="absmiddle" style="vertical-align:-12px;margin-right:8px" alt="" />
   Network & Socials
 </h2>
 

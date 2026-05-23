@@ -4,4 +4,5 @@ readme_body.html
 render_readme.py
 remove_bg.py
 process_goku.py
+process_goku_anim.py
 process_shenron.py

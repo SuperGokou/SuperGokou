@@ -5,10 +5,7 @@
 
 <table width="100%">
 <tr>
-<td width="60%" valign="top">
-<table border="0">
-<tr>
-<td valign="top" width="70%">
+<td valign="top" width="40%">
 <h2>Hi, I'm Ming!</h2>
   <ul>
     <li>
@@ -33,16 +30,13 @@
     </li>
   </ul>
 </td>
-<td valign="middle" width="30%" align="center">
+<td valign="middle" width="25%" align="center">
   <img src="./icons/dbz-saiyan-anim.gif" alt="Pixel-art Saiyan" width="100%" />
 </td>
+<td valign="middle" width="35%" align="center">
+  <img src="gokou_pnl.svg" alt="Gokou PnL Dragon" width="100%" />
+</td>
 </tr>
-</table>
-    </td>
-    <td width="40%" align="center" valign="middle">
-      <img src="gokou_pnl.svg" alt="Gokou PnL Dragon" width="100%" />
-    </td>
-  </tr>
 </table>
 
 

@@ -3,9 +3,9 @@
 </p>
 
 
-<table width="1100">
+<table>
 <tr>
-<td valign="top" width="60%">
+<td width="60%">
 <h2>Hi, I'm Ming!</h2>
   <ul>
     <li>
@@ -30,14 +30,14 @@
     </li>
   </ul>
 </td>
-<td valign="middle" width="40%" align="center">
-  <img src="gokou_pnl.svg" alt="Gokou PnL Dragon" width="100%" />
+    <td width="50%" align="center">
+      <img src="gokou_pnl.svg" alt="Gokou PnL Dragon" width="100%" />
 </td>
 </tr>
 </table>
 
 
-<table width="1100">
+<table>
 <tr>
   <td valign="top" width="60%">
     <h2>
@@ -110,9 +110,6 @@
 
 
 
-<table width="1100">
-<tr>
-<td valign="top" width="100%">
 <h2>
   <img src="./icons/dbz-duo-halo.gif" width="100" align="absmiddle" style="vertical-align:-12px;margin-right:8px" alt="" />
   Network & Socials
@@ -141,6 +138,3 @@
     />
   </span>
 </p>
-</td>
-</tr>
-</table>

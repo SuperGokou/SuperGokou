@@ -10,11 +10,11 @@
   <ul>
     <li>
       <img src="./icons/dbz-pod.svg" width="16" align="top" alt="" />
-      <strong>Founder:</strong> Building an AI startup at the intersection of ML & Quant Finance.
+      <strong>Founder:</strong> AI startup at ML × Quant Finance
     </li>
     <li>
       <img src="./icons/dbz-scouter.svg" width="16" align="top" alt="" />
-      <strong>Focus:</strong> Quant Strategies, Trading Systems, and MLOps.
+      <strong>Focus:</strong> Quant Strategies · Trading Systems · MLOps
     </li>
     <li>
       <img src="./icons/dbz-ball.svg" width="16" align="top" alt="" />
@@ -22,11 +22,11 @@
     </li>
     <li>
       <img src="./icons/dbz-radar.svg" width="16" align="top" alt="" />
-      <strong>More About Me:</strong> <a href="https://www.seas.upenn.edu/~xiaming/">My Portfolio</a>
+      <strong>More:</strong> <a href="https://www.seas.upenn.edu/~xiaming/">My Portfolio</a>
     </li>
     <li>
       <img src="./icons/dbz-capsule.svg" width="16" align="top" alt="" />
-      Tech enthusiast and entrepreneur
+      Tech enthusiast & entrepreneur
     </li>
     </ul>
     </td>

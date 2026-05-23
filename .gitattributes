@@ -1,0 +1,12 @@
+# Normalize line endings across platforms
+* text=auto eol=lf
+
+# Binary assets
+*.png binary
+*.gif binary
+*.webp binary
+*.jpg binary
+*.jpeg binary
+
+# SVGs treated as text so diffs are readable
+*.svg text eol=lf

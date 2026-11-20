@@ -1,0 +1,41 @@
+name: Refresh original profile stats
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '37 6 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - name: Build original Awesome GitHub Stats renderer
+        run: |
+          git clone -q https://github.com/brunobritodev/awesome-github-stats "$RUNNER_TEMP/renderer"
+          cd "$RUNNER_TEMP/renderer"
+          git checkout -q a8ead388dee351c4f4f0f2531ed076abb3e2ac10
+          dotnet build src/AwesomeGithubStats.Api -c Release
+      - name: Render level card from GitHub data
+        env:
+          PATS__0: ${{ github.token }}
+        run: |
+          cd "$RUNNER_TEMP/renderer/src/AwesomeGithubStats.Api"
+          dotnet bin/Release/net10.0/AwesomeGithubStats.Api.dll --urls http://127.0.0.1:5090 &
+          trap 'kill $!' EXIT
+          curl -fsS --retry 12 --retry-connrefused --retry-delay 1 http://127.0.0.1:5090/health
+          curl -fsS 'http://127.0.0.1:5090/user-stats/SuperGokou?cardType=level&theme=default' -o "$GITHUB_WORKSPACE/github-stats.svg"
+          python3 -c 'import sys,xml.etree.ElementTree as E; root=E.parse(sys.argv[1]).getroot(); assert root.tag.endswith("}svg") and "Ming Xia" in "".join(root.itertext())' "$GITHUB_WORKSPACE/github-stats.svg"
+      - name: Publish card when statistics change
+        run: |
+          git add github-stats.svg
+          if ! git diff --cached --quiet; then
+            git -c user.name=github-actions[bot] -c user.email=41898282+github-actions[bot]@users.noreply.github.com commit -m 'Refresh profile stats'
+            git push
+          fi

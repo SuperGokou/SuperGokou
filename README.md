@@ -101,7 +101,7 @@
   </td>
   <td valign="center" width="40%">
     <div align="center">
-      <img src="https://awesome-github-stats.azurewebsites.net/user-stats/SuperGokou?cardType=level&theme=default" alt="GitHub Stats" width="100%" />
+      <img src="./github-stats.svg" alt="Ming Xia's GitHub Stats (snapshot)" title="GitHub Stats snapshot" width="100%" />
       <br /><br />
       <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=SuperGokou&theme=default" alt="Languages" width="100%" />
     </div>

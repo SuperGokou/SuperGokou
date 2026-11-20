@@ -101,7 +101,7 @@
   </td>
   <td valign="center" width="40%">
     <div align="center">
-      <img src="https://github-readme-stats.vercel.app/api?username=SuperGokou&amp;custom_title=Ming%20Xia&amp;show_icons=true&amp;include_all_commits=true&amp;bg_color=ffffff&amp;title_color=2879ad&amp;text_color=202124&amp;icon_color=52648a&amp;ring_color=227bc4" alt="Ming Xia's GitHub Stats" width="100%" />
+      <img src="./github-stats.svg" alt="Ming Xia's GitHub Stats" width="100%" />
       <br /><br />
       <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=SuperGokou&theme=default" alt="Languages" width="100%" />
     </div>

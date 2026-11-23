@@ -56,7 +56,7 @@
 
       }
       to {
-        stroke-dasharray: 222.16,2000;
+        stroke-dasharray: 222.45,2000;
       }
     }
 
